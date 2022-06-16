@@ -1,0 +1,34 @@
+.main-header {
+
+  .navbar {
+    padding: 2.5rem 2.9rem;
+    display: flex;
+
+    .navbar-brand {
+      display: block;
+    }
+
+    .navbar-nav {
+      display: flex;
+      justify-content: flex-end;
+
+      .nav-item {
+        padding: 0px 16px;
+        &:hover {
+          background-color: #B2D235;
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+}
+
+.example {
+  display: flex;
+  align-items: center;
+  min-height: 54vh;
+}
+
+@media (max-width: 992px) {
+	// TODO
+}
