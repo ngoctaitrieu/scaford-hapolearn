@@ -1,7 +1,11 @@
 .main-header {
+  font-family: 'Open sans', sans-serif;
+  color:#505353;
+  background-color: #FFFFFF;
+  display: block;
 
   .navbar {
-    padding: 2.5rem 2.9rem;
+    padding: 1.5rem 2rem;
     display: flex;
 
     .navbar-brand {
@@ -11,23 +15,23 @@
     .navbar-nav {
       display: flex;
       justify-content: flex-end;
+    }
+  }
 
-      .nav-item {
-        padding: 0px 16px;
-        &:hover {
-          background-color: #B2D235;
-          border-radius: 20px;
-        }
-      }
+  .nav-item {
+    padding: 0px 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: #B2D235;
+      border-radius: 20px;
+      
     }
   }
 }
 
-.example {
-  display: flex;
-  align-items: center;
-  min-height: 54vh;
-}
+
 
 @media (max-width: 992px) {
 	// TODO
