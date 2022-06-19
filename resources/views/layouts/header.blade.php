@@ -1,5 +1,5 @@
 <header class="main-header">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#">
             <img class="logo-image" src="{{ asset('images/logo.png') }}" alt="HapoLearn Logo">
         </a>
