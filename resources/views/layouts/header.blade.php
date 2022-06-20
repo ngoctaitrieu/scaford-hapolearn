@@ -1,8 +1,15 @@
 <header class="main-header">
     <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#">
-            <img class="logo-image" src="{{ asset('images/logo.png') }}" alt="HapoLearn Logo">
-        </a>
+        <div class="logo-container">
+            <a class="navbar-brand" href="#">
+                <img class="logo-image" src="{{ asset('images/logo.png') }}" alt="HapoLearn Logo">
+            </a>
+            <div class="navbar-icons">
+                <div class="navbar-icon">
+
+                </div>
+            </div>
+        </div>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto w-100">
@@ -24,3 +31,4 @@
         </div>
     </nav>
 </header>
+
