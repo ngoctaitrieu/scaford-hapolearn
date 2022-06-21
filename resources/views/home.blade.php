@@ -45,6 +45,15 @@
            
     </div>
 </section>
+
+<section class="content">
+    <div class="main-content">
+
+    </div>
+    <div class="other-content">
+        
+    </div>
+</section>
 @endsection
 
 

@@ -24,6 +24,11 @@
       display: flex;
       justify-content: flex-end;
     }
+
+    .active {
+      background-color: #B2D235;
+      border-radius: 20px;
+    }
   }
 
   .nav-item {
@@ -58,8 +63,8 @@
     }
     
     .navbar {
-       display: block;
-       padding: 18px 20px;
+      display: block;
+      padding: 18px 20px;
 
       .logo-container {
         display: flex;
