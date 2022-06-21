@@ -41,17 +41,10 @@
     <div class="banner-bottom">
         
     </div>
-    <!-- <div class="overlay">
+    <div class="overlay">
            
-    </div> -->
-</section>
-<!-- 
-<section class="main-container">
-    <div class="top-bg"></div>
-    <div class="main-content">
-        <img src="{{ asset('images/html-css-js.png') }}" alt="">
     </div>
-</section> -->
+</section>
 @endsection
 
 

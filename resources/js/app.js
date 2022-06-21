@@ -42,7 +42,6 @@ menuBtn.addEventListener('click', ()=> {
 });
 
 overlay.addEventListener('click', ()=> {
-    menu.classList.toggle("overlay-close");
-    overlay.classList.toggle("overlay-close");
+    menu.classList.toggle("overlay-open");
     overlay.classList.toggle("overlay-open");
 });
