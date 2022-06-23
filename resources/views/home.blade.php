@@ -2,9 +2,9 @@
 
 @section('content')
 
-<section class="banner" style="background-image: url('images/banner.png');">
+<section class="banner">
 
-    <div class="banner-container">
+    <div class="banner-container"  style="background-image: url('images/banner.png');">
         <div class="banner-title">
             <p class="banner-title-content">Learn Anytime, Anywhere</p>
             <p class="banner-title-content banner-title-content-b">
@@ -38,12 +38,20 @@
         </div>
         <a href="#" class="button-1">Start Learning Now!</a>
     </div>
+    <div class="banner-bottom">
+        
+    </div>
+    <div class="overlay">
+           
+    </div>
 </section>
 
-<section class="main-container">
-    <div class="top-bg"></div>
+<section class="content">
     <div class="main-content">
-        <img src="{{ asset('images/html-css-js.png') }}" alt="">
+
+    </div>
+    <div class="other-content">
+        
     </div>
 </section>
 @endsection

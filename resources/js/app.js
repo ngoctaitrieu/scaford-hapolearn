@@ -30,3 +30,18 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app',
 });
+
+const menu = document.querySelector('.navbar-collapse');
+const menuBtn = document.querySelector('.navbar-icons');
+const overlay = document.querySelector('.overlay');
+
+menuBtn.addEventListener('click', ()=> {
+    menu.classList.toggle("overlay-open");
+    overlay.classList.toggle("overlay-open");
+
+});
+
+overlay.addEventListener('click', ()=> {
+    menu.classList.toggle("overlay-open");
+    overlay.classList.toggle("overlay-open");
+});
