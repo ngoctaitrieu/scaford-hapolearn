@@ -50,7 +50,7 @@
     <div class="main-content">
         <div class="row">
             <div class="col-lg-4">
-                <div class="card" style="width: 18rem;">
+                <div class="card">
                     <div class="card-container-img">
                         <img src="{{ asset('images/html-css-js.png') }}" class="card-img-top" alt="Học HTML, CSS và JS">
                     </div>
@@ -62,7 +62,7 @@
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="card" style="width: 18rem;">
+                <div class="card">
                     <div class="card-container-img">
                         <img src="{{ asset('images/laravel.png') }}" class="card-img-top" alt="Học Laravel">
                     </div>
@@ -74,7 +74,7 @@
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="card" style="width: 18rem;">
+                <div class="card">
                     <div class="card-container-img">
                         <img src="{{ asset('images/php.png') }}" class="card-img-top" alt="Học PHP">
                     </div>
@@ -91,7 +91,7 @@
         <p class="other-content-header">Other course</p>
         <div class="row">
             <div class="col-lg-4">
-                <div class="card" style="width: 18rem;">
+                <div class="card">
                     <div class="card-container-img">
                         <img src="{{ asset('images/html-css-js.png') }}" class="card-img-top" alt="Học HTML, CSS và JS">
                     </div>
@@ -103,7 +103,7 @@
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="card" style="width: 18rem;">
+                <div class="card">
                     <div class="card-container-img">
                         <img src="{{ asset('images/laravel.png') }}" class="card-img-top" alt="Học Laravel">
                     </div>
@@ -115,7 +115,7 @@
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="card" style="width: 18rem;">
+                <div class="card">
                     <div class="card-container-img">
                         <img src="{{ asset('images/php.png') }}" class="card-img-top" alt="Học PHP">
                     </div>
@@ -136,5 +136,9 @@
             </a>
         </div>
     </div>
+</section>
+
+<section class="container-fluid">
+
 </section>
 @endsection
