@@ -1,9 +1,13 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&family=Roboto:wght@300;500&display=swap');
-
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+//Slick
+@import "~slick-carousel/slick/slick";
+@import "~slick-carousel/slick/slick-theme";
 
 // Variables
 @import 'variables';

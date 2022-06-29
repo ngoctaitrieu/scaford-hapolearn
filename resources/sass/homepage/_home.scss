@@ -211,6 +211,153 @@
   }
 }
 
+.why-hapolearn-container {
+  height: 633px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'UTM BryantLG';
+
+  .why-hapolearn-title,
+  .why-hapolearn-text {
+    color: white;
+  }
+
+  .why-hapolearn-title {
+    font-size: 70px;
+    font-weight: 900;
+  }
+
+  .why-hapolearn-text {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .why-hapolearn-img {
+    width: 676px;
+    object-fit: contain;
+  }
+
+  .why-hapolearn-img2 {
+    display: none;
+  }
+}
+
+.feedback {
+  margin-top: 40px;
+  font-family: 'UTM BryantLG';
+
+  .feedback-heading {
+    width: fit-content;
+    text-align: center;
+    font-size: 60px;
+    color: #11114E;
+    font-weight: 900;
+    line-height: 98px;
+    display: flex;
+    margin: auto;
+    position: relative;
+    margin-bottom: 45px;
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 6px;
+      background-color: #B2D235;
+      border-radius: 3px;
+      position: absolute;
+      top: 100%;
+    }
+  }
+
+  .feedback-title {
+    text-align: center;
+    color: #505353;
+    font-size: 20px;
+    width: 705px;
+    margin: 0 auto;
+  }
+
+  .feedback-list {
+    width: 1100px;
+    margin: 20px auto;
+
+    .feedback-item {
+      margin-left: 10px;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      font-size: 26px;
+      color: #848687;
+      margin-top: -20px;
+    }
+  }
+
+  .feedback-comment {
+    position: relative;
+    width: 500px;
+    min-height: 140px;
+    padding: 20px 20px 20px 30px;
+    border: 1px solid #E2E2E2;
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px 0 rgb(0 0 0 / 10%), 0px -1px 4px 0 rgb(0 0 0 / 10%);
+
+    &::before {
+      content: "";
+      width: 4px;
+      height: 71%;
+      background-color: #D9DADC;
+      position: absolute;
+      left: 14px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 132px;
+      left: 17px;
+      width: 10px;
+      height: 10px;
+      background-color: white;
+      box-shadow: 2px 2px 3px rgb(0 0 0 / 10%);
+      transform: rotate(45deg);
+    }
+  }
+
+  .feedback-user {
+    display: flex;
+    margin-top: 20px;
+
+    .feedback-user-img {
+      object-fit: contain;
+      margin-right: 8px;
+    }
+
+    p {
+      margin: 0;
+      line-height: 20px;
+    }
+
+    .feedback-user-name {
+      font-size: 20px;
+      color: #11114E;
+      font-weight: 900;
+    }
+
+    .feedback-user-subject {
+      font-size: 16px;
+      color: #505353;
+    }
+  }
+
+  .feedback-user-rating {
+    .checked {
+      color: #F2C54F;
+    }
+  }
+}
+
 @media (max-width: 990px) {
   .banner {
     .banner-container {
@@ -313,6 +460,35 @@
 
     .view-all-content {
       margin-top: 10px;
+    }
+  }
+
+  .why-hapolearn-container {
+    height: 384px;
+    padding-top: 90px;
+
+    .why-hapolearn-content {
+      position: relative;
+    }
+
+    .why-hapolearn-title {
+      font-size: 50px;
+      position: absolute;
+      white-space: nowrap;
+      top: -110px;
+      left: 204px;
+    }
+
+    .why-hapolearn-text {
+      font-size: 16px;
+    }
+
+    .why-hapolearn-img {
+      width: 326px;
+    }
+
+    .why-hapolearn-img2 {
+      display: none;
     }
   }
 }
@@ -424,6 +600,35 @@
       a {
         font-size: 25px;
       }
+    }
+  }
+
+  .why-hapolearn-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
+    .why-hapolearn-content {
+      padding-top: 96px;
+    }
+
+    .why-hapolearn-title {
+      font-size: 40px;
+      white-space: normal;
+      top: -60px;
+      left: 142px;
+    }
+
+    .why-hapolearn-text {
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .why-hapolearn-img2 {
+      display: block;
+      position: absolute;
+      top: -210px;
+      left: -28px;
     }
   }
 }
