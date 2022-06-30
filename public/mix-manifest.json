@@ -7,6 +7,8 @@
     "/images/logo-img.png": "/images/logo-img.png",
     "/images/logo.png": "/images/logo.png",
     "/images/php.png": "/images/php.png",
+    "/images/user-img.png": "/images/user-img.png",
+    "/images/vendor/slick-carousel/slick/ajax-loader.gif": "/images/vendor/slick-carousel/slick/ajax-loader.gif",
     "/images/why-hapolearn-bg.png": "/images/why-hapolearn-bg.png",
     "/images/why-hapolearn-img.png": "/images/why-hapolearn-img.png",
     "/images/why-hapolearn-img2.png": "/images/why-hapolearn-img2.png",
@@ -22,10 +24,8 @@
     "/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2",
     "/fonts/vendor/@fortawesome/fontawesome-free/webfa-v4compatibility.ttf": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-v4compatibility.ttf",
     "/fonts/vendor/@fortawesome/fontawesome-free/webfa-v4compatibility.woff2": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-v4compatibility.woff2",
-    "/images/vendor/slick-carousel/slick/ajax-loader.gif": "/images/vendor/slick-carousel/slick/ajax-loader.gif",
     "/fonts/vendor/slick-carousel/slick/slick.eot": "/fonts/vendor/slick-carousel/slick/slick.eot",
     "/fonts/vendor/slick-carousel/slick/slick.svg": "/fonts/vendor/slick-carousel/slick/slick.svg",
     "/fonts/vendor/slick-carousel/slick/slick.ttf": "/fonts/vendor/slick-carousel/slick/slick.ttf",
-    "/fonts/vendor/slick-carousel/slick/slick.woff": "/fonts/vendor/slick-carousel/slick/slick.woff",
-    "/images/user-img.png": "/images/user-img.png"
+    "/fonts/vendor/slick-carousel/slick/slick.woff": "/fonts/vendor/slick-carousel/slick/slick.woff"
 }
