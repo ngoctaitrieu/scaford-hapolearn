@@ -3,7 +3,6 @@
 @section('content')
 
 <section class="banner">
-
     <div class="banner-container"  style="background-image: url('images/banner.png');">
         <div class="banner-title">
             <p class="banner-title-content">Learn Anytime, Anywhere</p>
@@ -39,10 +38,10 @@
         <a href="#" class="button-1">Start Learning Now!</a>
     </div>
     <div class="banner-bottom">
-        
+
     </div>
     <div class="overlay">
-           
+
     </div>
 </section>
 
@@ -230,6 +229,51 @@
                     </p>
                 </div>
             </div>
+        </div>
+        <div class="feedback-item">
+            <div class="feedback-comment">
+                “A wonderful course on how to start. Eddie beautifully conveys all essentials of a becoming a good Angular developer. Very glad to have taken this course. Thank you Eddie Bryan.”
+            </div>
+            <div class="feedback-user">
+                <img class="feedback-user-img" src="{{ asset('images/user-img.png') }}" alt="user image">
+                <div class="feedback-user-info">
+                    <p class="feedback-user-name">Hoang Anh Nguyen</p>
+                    <p class="feedback-user-subject">PHP</p>
+                    <p class="feedback-user-rating">
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star"></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="banner-b" style="background-image: url('{{ asset('images/banner2.png') }}');">
+    <p class="banner-b-title">
+        Become a member of our
+        growing community!
+    </p>
+    <a class="banner-b-btn" href="">Start Learning Now!</a>
+</section>
+
+<section class="statistic container-fluid">
+    <p class="statistic-heading">Statistic</p>
+    <div class="statistic-main">
+        <div class="statistic-content">
+            <p class="statistic-content-title">Courses</p>
+            <p class="statistic-content-num">1,586</p>
+        </div>
+        <div class="statistic-content">
+            <p class="statistic-content-title">Lessons</p>
+            <p class="statistic-content-num">2,689</p>
+        </div>
+        <div class="statistic-content">
+            <p class="statistic-content-title">Learners</p>
+            <p class="statistic-content-num">16,882</p>
         </div>
     </div>
 </section>

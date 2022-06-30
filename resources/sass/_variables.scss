@@ -27,3 +27,12 @@ $cyan: #6cb2eb;
 main {
   min-height: 54vh;
 }
+
+@font-face {
+  font-family: UTM BryantLG;
+  src: url("../assets/fonts/UTM_BryantLG_B.ttf");
+  src: url("../assets/fonts/UTM_BryantLG.ttf");
+  src: url("../assets/fonts/utm_bryantlg-webfont.woff");
+  src: url("../assets/fonts/utm_bryantlg-webfont.woff2");
+}
+

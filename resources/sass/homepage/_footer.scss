@@ -1,0 +1,95 @@
+.footer {
+	background-color: #505353;
+	color: white;
+	padding-top: 40px;
+	font-family: 'UTM BryantLG';
+
+	.footer-img {
+		text-align: left;
+
+		img {
+			margin-left: 5px;
+		}
+
+		p {
+			max-width: 230px;
+			margin-left: 70px;
+		}
+	}
+
+	.footer-links {
+		text-align: left;
+	}
+
+	.footer-icons {
+		display: flex;
+		align-items: center;
+		padding-top: -40px;
+		margin-top: -40px;
+
+		p {
+			margin: 0 20px;
+		}
+
+		p i {
+			font-size: 30px;
+			color: white;
+		}
+	}
+}
+
+.footer-end {
+	background-color: #454545;
+	color: white;
+	font-family: 'UTM BryantLG';
+
+}
+
+@media (max-width: 990px) {
+	.footer {
+		.footer-img {
+			
+			img {
+			max-width: 250px;
+			}
+
+			p {
+				margin-left: 62px;
+			}
+		}
+
+	}
+}
+
+@media (max-width: 480px) {
+	.footer {
+		.footer-img {
+			order: 2;
+			width: 50%;
+			
+			img {
+				max-width: 200px;
+			}
+
+			p {
+				margin-left: 10px;
+			}
+		}
+
+		.footer-links {
+			order: 1;
+			width: 50%;
+			padding-left: 30px;
+		}
+
+		.footer-icons {
+			order: 2;
+			width: 50%;
+			padding-left: 40px;
+
+			p {
+				margin: 0 10px;
+			}
+		}
+	}
+}
