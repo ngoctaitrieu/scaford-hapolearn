@@ -46,12 +46,99 @@
     </div>
 </section>
 
-<section class="content">
+<section class="content container-fluid">
     <div class="main-content">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="{{ asset('images/html-css-js.png') }}" class="card-img-top" alt="Học HTML, CSS và JS">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">HTML/CSS/js Tutorial</h5>
+                        <p class="card-text">I knew hardly anything about HTML, JS, and CSS before entering New Media. I had coded quite a bit, but never touched anything in regards to web development.</p>
+                        <a href="#" class="card-btn btn btn-primary">Take This Course</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="{{ asset('images/laravel.png') }}" class="card-img-top" alt="Học Laravel">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">LARAVEL Tutorial</h5>
+                        <p class="card-text">I knew hardly anything about HTML, JS, and CSS before entering New Media. I had coded quite a bit, but never touched anything in regards to web development.</p>
+                        <a href="#" class="card-btn btn btn-primary">Take This Course</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="{{ asset('images/php.png') }}" class="card-img-top" alt="Học PHP">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">PHP Tutorial</h5>
+                        <p class="card-text">I knew hardly anything about HTML, JS, and CSS before entering New Media. I had coded quite a bit, but never touched anything in regards to web development.</p>
+                        <a href="#" class="card-btn btn btn-primary">Take This Course</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="other-content main-content">
+        <p class="other-content-header">Other course</p>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="{{ asset('images/html-css-js.png') }}" class="card-img-top" alt="Học HTML, CSS và JS">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">HTML/CSS/js Tutorial</h5>
+                        <p class="card-text">I knew hardly anything about HTML, JS, and CSS before entering New Media. I had coded quite a bit, but never touched anything in regards to web development.</p>
+                        <a href="#" class="card-btn btn btn-primary">Take This Course</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="{{ asset('images/laravel.png') }}" class="card-img-top" alt="Học Laravel">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">LARAVEL Tutorial</h5>
+                        <p class="card-text">I knew hardly anything about HTML, JS, and CSS before entering New Media. I had coded quite a bit, but never touched anything in regards to web development.</p>
+                        <a href="#" class="card-btn btn btn-primary">Take This Course</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="{{ asset('images/php.png') }}" class="card-img-top" alt="Học PHP">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">PHP Tutorial</h5>
+                        <p class="card-text">I knew hardly anything about HTML, JS, and CSS before entering New Media. I had coded quite a bit, but never touched anything in regards to web development.</p>
+                        <a href="#" class="card-btn btn btn-primary">Take This Course</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="view-all-content">
+            <a href="#">View All Our Courses</a>
+            <a href="">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path d="M502.6 278.6l-128 128c-12.51 12.51-32.76 12.49-45.25 0c-12.5-12.5-12.5-32.75 0-45.25L402.8 288H32C14.31 288 0 273.7 0 255.1S14.31 224 32 224h370.8l-73.38-73.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l128 128C515.1 245.9 515.1 266.1 502.6 278.6z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
 
-    </div>
-    <div class="other-content">
-        
-    </div>
+<section class="container-fluid">
+
 </section>
 @endsection
