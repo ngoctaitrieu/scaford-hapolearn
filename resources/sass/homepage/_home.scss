@@ -80,7 +80,6 @@
   }
 }
 
-// Content
 .content {
   margin-bottom: 60px;
 }
@@ -105,7 +104,7 @@
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     }
 
-    .card-container-img {
+    .card-img {
       background-color: #3F6185;
       height: 215px;
       display: flex;
@@ -428,7 +427,7 @@
         min-height: 158px;
       }
 
-      .card-container-img {
+      .card-img {
         min-width: 240px;
         max-height: 158px;
       }
@@ -512,7 +511,7 @@
 @media (max-width: 657px) {
   .main-content {
     .col-lg-4 {
-      .card-container-img {
+      .card-img {
         min-width: 170px;
       }
 
@@ -574,7 +573,7 @@
         flex-direction: column;
       }
 
-      .card-container-img {
+      .card-img {
         max-height: 190px;
       }
 
