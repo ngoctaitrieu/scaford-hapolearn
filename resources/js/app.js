@@ -4,7 +4,10 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+import 'slick-carousel/slick/slick';
+
 require('./bootstrap');
+require('./slickk');
 
 window.Vue = require('vue').default;
 

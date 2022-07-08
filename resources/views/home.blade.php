@@ -138,7 +138,99 @@
     </div>
 </section>
 
-<section class="container-fluid">
+<section class="why-hapolearn-container container-fluid" style="background-image: url('{{ asset('images/why-hapolearn-bg.png') }}');">
+    <div class="why-hapolearn-content">
+        <img class="why-hapolearn-img2" src="{{ asset('images/why-hapolearn-img2.png') }}" alt="Hapolearn images top">
+        <p class="why-hapolearn-title">
+            Why HapoLearn?
+        </p>
+        <p class="why-hapolearn-text">
+            <i class="fa-solid fa-circle-check"></i>
+            Interactive lessons, "on-the-go" practice, peer support.
+        </p>
+        <p class="why-hapolearn-text">
+            <i class="fa-solid fa-circle-check"></i>
+            Interactive lessons, "on-the-go" practice, peer support.
+        </p>
+        <p class="why-hapolearn-text">
+            <i class="fa-solid fa-circle-check"></i>
+            Interactive lessons, "on-the-go" practice, peer support.
+        </p>
+        <p class="why-hapolearn-text">
+            <i class="fa-solid fa-circle-check"></i>
+            Interactive lessons, "on-the-go" practice, peer support.
+        </p>
+        <p class="why-hapolearn-text">
+            <i class="fa-solid fa-circle-check"></i>
+            Interactive lessons, "on-the-go" practice, peer support.
+        </p>
+    </div>
+    <img class="why-hapolearn-img" src="{{ asset('images/why-hapolearn-img.png') }}" alt="Ảnh của why hapolearn">
+</section>
 
+<section class="feedback container-fluid">
+    <p class="feedback-heading">Feedback</p>
+    <p class="feedback-title">
+        What other students turned professionals have to say about us after learning with us and reaching their goals
+    </p>
+    <div class="feedback-list">
+        <div class="feedback-item">
+            <div class="feedback-comment">
+                “A wonderful course on how to start. Eddie beautifully conveys all essentials of a becoming a good Angular developer. Very glad to have taken this course. Thank you Eddie Bryan.”
+            </div>
+            <div class="feedback-user">
+                <img class="feedback-user-img" src="{{ asset('images/user-img.png') }}" alt="user image">
+                <div class="feedback-user-info">
+                    <p class="feedback-user-name">Hoang Anh Nguyen</p>
+                    <p class="feedback-user-subject">PHP</p>
+                    <p class="feedback-user-rating">
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star"></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="feedback-item">
+            <div class="feedback-comment">
+                “A wonderful course on how to start. Eddie beautifully conveys all essentials of a becoming a good Angular developer. Very glad to have taken this course. Thank you Eddie Bryan.”
+            </div>
+            <div class="feedback-user">
+                <img class="feedback-user-img" src="{{ asset('images/user-img.png') }}" alt="user image">
+                <div class="feedback-user-info">
+                    <p class="feedback-user-name">Hoang Anh Nguyen</p>
+                    <p class="feedback-user-subject">PHP</p>
+                    <p class="feedback-user-rating">
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star"></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="feedback-item">
+            <div class="feedback-comment">
+                “A wonderful course on how to start. Eddie beautifully conveys all essentials of a becoming a good Angular developer. Very glad to have taken this course. Thank you Eddie Bryan.”
+            </div>
+            <div class="feedback-user">
+                <img class="feedback-user-img" src="{{ asset('images/user-img.png') }}" alt="user image">
+                <div class="feedback-user-info">
+                    <p class="feedback-user-name">Hoang Anh Nguyen</p>
+                    <p class="feedback-user-subject">PHP</p>
+                    <p class="feedback-user-rating">
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star"></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 @endsection
