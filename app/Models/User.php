@@ -48,7 +48,7 @@ class User extends Authenticatable
 
     public function courseUsers()
     {
-        return $this->belongsToMany(Course::class, 'Course_user', 'user_id', 'course_id');
+        return $this->belongsToMany(Course::class, 'CourseUser', 'user_id', 'course_id');
     }
 
     public function reviews()
@@ -58,16 +58,16 @@ class User extends Authenticatable
 
     public function lessons()
     {
-        return $this->belongsToMany(Lesson::class, 'Lesson_user', 'user_id', 'lesson_id');
+        return $this->belongsToMany(Lesson::class, 'LessonUser', 'user_id', 'lesson_id');
     }
 
     public function programs()
     {
-        return $this->belongsToMany(Program::class, 'Program_user', 'user_id', 'program_id');
+        return $this->belongsToMany(Program::class, 'ProgramUser', 'user_id', 'program_id');
     }
 
     public function courseTeacher()
     {
-        return $this->belongsToMany(Course::class, 'Course_teacher', 'user_id', 'course_id');
+        return $this->belongsToMany(Course::class, 'CourseTeacher', 'user_id', 'course_id');
     }
 }

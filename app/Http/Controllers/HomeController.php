@@ -14,10 +14,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // return view('home');
-        $data = User::find(11)->courseUsers();
-        echo "<pre>";
-        dd($data);
-        echo "</pre>";
+        return view('home');
     }
 }
