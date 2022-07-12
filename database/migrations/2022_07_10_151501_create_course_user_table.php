@@ -28,6 +28,6 @@ class CreateCourseUserTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('course_users');
+        Schema::dropIfExists('course_user');
     }
 }

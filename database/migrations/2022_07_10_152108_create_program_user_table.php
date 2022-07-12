@@ -28,6 +28,6 @@ class CreateProgramUserTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('program_users');
+        Schema::dropIfExists('program_user');
     }
 }

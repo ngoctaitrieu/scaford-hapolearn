@@ -48,7 +48,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function courseUsers()
+    public function courses()
     {
         return $this->belongsToMany(Course::class, 'course_user', 'user_id', 'course_id');
     }
@@ -68,7 +68,7 @@ class User extends Authenticatable
         return $this->belongsToMany(Program::class, 'program_user', 'user_id', 'program_id');
     }
 
-    public function courseTeacher()
+    public function teacherCourse()
     {
         return $this->belongsToMany(Course::class, 'course_teacher', 'user_id', 'course_id');
     }
