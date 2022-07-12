@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCourseTagsTable extends Migration
+class CreateProgramUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateCourseTagsTable extends Migration
      */
     public function up()
     {
-        Schema::create('course_tag', function (Blueprint $table) {
-            $table->unsignedBigInteger('course_id');
-            $table->unsignedBigInteger('tag_id');
-            $table->primary(['course_id', 'tag_id']);
+        Schema::create('program_user', function (Blueprint $table) {
+            $table->unsignedBigInteger('program_id');
+            $table->unsignedBigInteger('user_id');
+            $table->primary(['program_id', 'user_id']);
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateCourseTagsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('course_tags');
+        Schema::dropIfExists('program_users');
     }
 }
