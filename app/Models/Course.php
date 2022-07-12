@@ -20,17 +20,17 @@ class Course extends Model
 
     public function tags()
     {
-        return $this->belongsToMany(Tag::class, 'Course_tag', 'course_id', 'tag_id');
+        return $this->belongsToMany(Tag::class, 'course_tags', 'course_id', 'tag_id');
     }
 
     public function userCourses()
     {
-        return $this->belongsToMany(User::class, 'Course_user', 'course_id', 'user_id');
+        return $this->belongsToMany(User::class, 'course_users', 'course_id', 'user_id');
     }
 
     public function userTeachers()
     {
-        return $this->belongsToMany(User::class, 'Course_teacher', 'course_id', 'user_id');
+        return $this->belongsToMany(User::class, 'course_teachers', 'course_id', 'user_id');
     }
 
     public function lessons()
