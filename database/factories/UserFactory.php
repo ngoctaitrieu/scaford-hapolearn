@@ -24,14 +24,14 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
-            'user_name' => $this->faker->name($gender = null),
+            'user_name' => $this->faker->name(),
             'email' => $this->faker->unique()->safeEmail(),
             'password' => $this->faker->password(),
-            'avatar' => $this->faker->imageUrl($width = 50, $height = 50),
-            'date_of_birth' => $this->faker->date($format = 'Y-m-d', $max = 'now'),
+            'avatar' => $this->faker->imageUrl(),
+            'date_of_birth' => $this->faker->date(),
             'address' => $this->faker->streetAddress(),
             'phone' => $this->faker->e164PhoneNumber(),
-            'about' => $this->faker->realText($maxNbChars = 200, $indexSize = 2)
+            'about' => $this->faker->realText()
         ];
     }
 

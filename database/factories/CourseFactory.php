@@ -14,10 +14,10 @@ class CourseFactory extends Factory
     public function definition()
     {
         return [
-            'course_name' => $this->faker->name($gender = null),
-            'image' => $this->faker->imageUrl($width = 50, $height = 50),
-            'description' => $this->faker->text($maxNbChars = 200),
-            'price' => $this->faker->numberBetween($min = 1000, $max = 10000)
+            'course_name' => $this->faker->name(),
+            'image' => $this->faker->imageUrl(),
+            'description' => $this->faker->text(),
+            'price' => $this->faker->numberBetween()
         ];
     }
 }
