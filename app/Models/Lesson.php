@@ -11,7 +11,7 @@ class Lesson extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'lesson_name',
+        'name',
         'image',
     ];
 
