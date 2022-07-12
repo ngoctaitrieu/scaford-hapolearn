@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Course;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class CourseFactory extends Factory
@@ -11,6 +12,9 @@ class CourseFactory extends Factory
      *
      * @return array
      */
+
+    protected $model = Course::class;
+
     public function definition()
     {
         return [

@@ -24,6 +24,6 @@ class Program extends Model
 
     public function users()
     {
-        return $this->belongsToMany(User::class, 'LessonUser', 'lesson_id', 'user_id');
+        return $this->belongsToMany(User::class, 'Lesson_user', 'lesson_id', 'user_id');
     }
 }
