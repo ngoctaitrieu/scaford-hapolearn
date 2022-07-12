@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Course;
 use Illuminate\Http\Request;
 use App\Models\User;
 
@@ -15,5 +16,7 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+        // $course = Course::find(7);
+        // dd($course->userCourses());
     }
 }
