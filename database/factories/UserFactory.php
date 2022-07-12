@@ -25,13 +25,14 @@ class UserFactory extends Factory
     {
         return [
             'user_name' => $this->faker->name(),
-            'email' => $this->faker->unique()->safeEmail(),
+            'email' => $this->faker->unique()->freeEmail(),
             'password' => $this->faker->password(),
-            'avatar' => $this->faker->imageUrl(),
-            'date_of_birth' => $this->faker->date(),
+            'avatar' => $this->faker->imageUrl(100, 100),
+            'date_of_birth' => $this->faker->date('Y-m-d'),
             'address' => $this->faker->streetAddress(),
             'phone' => $this->faker->e164PhoneNumber(),
-            'about' => $this->faker->realText()
+            'about' => $this->faker->realText(200, 2),
+            'role' => $this->faker->numberBetween(0, 1)
         ];
     }
 
