@@ -13,8 +13,9 @@ class Review extends Model
     protected $fillable = [
         'course_id',
         'user_id',
-        'content',
-        'star'
+        'message',
+        'rate',
+        'parent_id'
     ];
 
     public function courses()

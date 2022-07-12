@@ -16,9 +16,9 @@ class CreateProgramsTable extends Migration
         Schema::create('programs', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('lesson_id');
-            $table->string('name');
-            $table->string('source_code');
-            $table->string('type');
+            $table->string('name')->nullable();
+            $table->string('source_code')->nullable();
+            $table->string('type')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
