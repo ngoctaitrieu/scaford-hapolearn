@@ -13,7 +13,7 @@ class CreateProgramUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('program_users', function (Blueprint $table) {
+        Schema::create('program_user', function (Blueprint $table) {
             $table->unsignedBigInteger('program_id');
             $table->unsignedBigInteger('user_id');
             $table->primary(['program_id', 'user_id']);

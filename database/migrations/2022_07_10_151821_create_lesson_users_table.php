@@ -13,7 +13,7 @@ class CreateLessonUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('lesson_users', function (Blueprint $table) {
+        Schema::create('lesson_user', function (Blueprint $table) {
             $table->unsignedBigInteger('lesson_id');
             $table->unsignedBigInteger('user_id');
             $table->primary(['lesson_id', 'user_id']);
