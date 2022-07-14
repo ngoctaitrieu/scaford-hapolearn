@@ -5,6 +5,10 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use App\Http\Requests\LoginFormRequest;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
@@ -36,5 +40,23 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    public function username()
+    {
+        return 'username';
+    }
+
+    public function login(LoginFormRequest $request)
+    {
+        $data = [
+            'username' => $request['username'],
+            'password' => $request['password'],
+        ];
+
+        if (Auth::attempt(array('username' => $data['username'], 'password' => $data['password']))) {
+            return redirect('test');
+        }
+        return redirect()->back()->with('status', 'Tên đăng nhập hoặc mật khẩu không đúng');
     }
 }

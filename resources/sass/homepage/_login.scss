@@ -1,0 +1,111 @@
+.login-container {
+  margin: 0;
+  padding-top: 160px;
+  padding-bottom: 100px;
+  background-color: #E5E5E5;
+  font-family: 'UTM BryantLG';
+
+  .login-form {
+    max-width: 32.666667%;
+
+    .card-header-text {
+      text-align: center;
+      font-size: 30px;
+      color: #B2D235;
+      font-weight: 900;
+      background-color: white;
+      border: 0;
+    }
+
+    .input-container {
+      max-width: 100%;
+    }
+
+    .input-container input {
+      background-color: #F5F5F5;
+    }
+
+    .mt-20 {
+      margin-top: 20px;
+    }
+
+    .mt-40 {
+      margin-top: 40px;
+    }
+
+    .login-btn-container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 100%;
+    }
+
+    .login-btn-container button {
+      background-color:#B2D235;
+      padding: 6px 50px;
+      box-shadow: inset 0px 1.5px 2px #6F8710;
+      border-radius: 25px;
+      color: white;
+      font-weight: 500;
+    }
+    
+    .login-btn-container a {
+      color: #B2D235;
+      text-decoration: underline;
+      outline: none;
+      box-shadow: none;
+    }
+
+    .form-heading {
+      padding: 0 15px;
+      position: relative;
+    }
+
+    .form-heading hr {
+      border: 0;
+      height: 1px;
+      background-color: #808080;
+    }
+
+    .form-heading span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: inline-block;
+      background-color: white;
+      padding: 0 8px 6px;
+    }
+
+    .btn-google {
+      background-color: #f8f8f8;
+      color: #DC4E41;
+      border: 1px solid #DC4E41;
+      width: 80%;
+      border-radius: 20px;
+      margin: 30px auto 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .btn-google i {
+      font-size: 24px;
+      display: block;
+      margin-right: 4px;
+    }
+
+    .btn-google span {
+      display: block;
+    }
+
+    .btn-register {
+      display: block;
+      width: 80%;
+      border-radius: 20px;
+      margin: 30px auto 0;
+      background-color:#B2D235;
+      box-shadow: inset 0px 1.5px 2px #6F8710;
+      color: white;
+      font-weight: 500;
+    }
+  }
+}
