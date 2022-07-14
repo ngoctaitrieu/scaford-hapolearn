@@ -52,7 +52,7 @@ class LoginController extends Controller
             'password' => $request['password'],
         ];
 
-        if (Auth::attempt(array('username' => $data['username'], 'password' => $data['password']))) {
+        if (Auth::attempt($data)) {
             return redirect('test');
         }
         return redirect()->back()->with('status', 'Tên đăng nhập hoặc mật khẩu không đúng');
