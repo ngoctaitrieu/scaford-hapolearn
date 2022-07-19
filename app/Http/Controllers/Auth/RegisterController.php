@@ -67,6 +67,7 @@ class RegisterController extends Controller
 
     public function register(RegisterFormRequest $request)
     {
+        dd($this->create($request->all()));
         $user = $this->create($request->all());
         Auth::login($user);
         return redirect('/')->with('success', 'Đăng ký thành công!');
