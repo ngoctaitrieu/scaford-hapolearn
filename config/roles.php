@@ -1,4 +1,5 @@
 <?php
     return [
-        'user' => 1,
+        'user' => 0,
+        'teacher' => 1,
     ];
