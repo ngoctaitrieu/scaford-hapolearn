@@ -61,13 +61,12 @@ class RegisterController extends Controller
             'username' => $data['username'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'role' => config('role.user'),
+            'role' => config('roles.user'),
         ]);
     }
 
     public function register(RegisterFormRequest $request)
     {
-        dd($this->create($request->all()));
         $user = $this->create($request->all());
         Auth::login($user);
         return redirect('/')->with('success', 'Đăng ký thành công!');

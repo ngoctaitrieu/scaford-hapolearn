@@ -53,7 +53,7 @@ class LoginController extends Controller
         ];
 
         if (Auth::attempt($data)) {
-            return redirect('test');
+            return redirect('/');
         }
         return redirect()->back()->with('error', 'Tên đăng nhập hoặc mật khẩu không đúng');
     }
@@ -61,6 +61,6 @@ class LoginController extends Controller
     public function logout()
     {
         Auth::logout();
-        redirect('/');
+        return redirect('/');
     }
 }

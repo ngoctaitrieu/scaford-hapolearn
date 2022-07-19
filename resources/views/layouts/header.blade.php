@@ -20,9 +20,18 @@
                     <a class="nav-link" href="#">ALL COURSES</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}" aria-haspopup="true" aria-expanded="false">
-                        LOGIN/REGISTER
-                    </a>
+                    @if(Auth::check())
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button type="submit" class="nav-link logout-btn">
+                                LOGOUT
+                            </button>
+                        </form>
+                    @else
+                        <a class="nav-link" href="{{ route('login') }}" aria-haspopup="true" aria-expanded="false">
+                            LOGIN/REGISTER
+                        </a>
+                    @endif
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">PROFILE</a>
