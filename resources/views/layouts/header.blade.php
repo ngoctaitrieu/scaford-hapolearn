@@ -20,7 +20,7 @@
                     <a class="nav-link" href="#">ALL COURSES</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link" href="{{ route('login') }}" aria-haspopup="true" aria-expanded="false">
                         LOGIN/REGISTER
                     </a>
                 </li>
