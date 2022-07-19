@@ -13,4 +13,6 @@ return [
     'email_address' => 'Địa chỉ email',
     'confirm_password' => 'Nhập lại mật khẩu',
     'sign_up' => 'Đăng ký',
+    'register_success' => 'Đăng ký thành công',
+    'login_error' => 'Tên đăng nhập hoặc mật khẩu không đúng',
 ];

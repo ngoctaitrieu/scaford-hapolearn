@@ -49,7 +49,7 @@ class RegisterFormRequest extends FormRequest
             'username' => 'Tên tài khoản',
             'email' => 'Email',
             'password' => 'Mật khẩu',
-            'password_confirmation' => 'Mật khẩu',
+            'password_confirmation' => 'Mật khẩu nhập lại',
         ];
     }
 }

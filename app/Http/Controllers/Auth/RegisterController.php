@@ -69,6 +69,6 @@ class RegisterController extends Controller
     {
         $user = $this->create($request->all());
         Auth::login($user);
-        return redirect('/')->with('success', 'Đăng ký thành công!');
+        return redirect('/')->with('success', __('message.register_success'));
     }
 }
