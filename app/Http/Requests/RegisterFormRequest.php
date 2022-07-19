@@ -24,27 +24,32 @@ class RegisterFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'username' => 'required|string|min:5|max:255|unique:users',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:8|confirmed',
-            'password_confirmation' => 'required|string|same:password',
+            'username' => 'required|min:5|max:255|unique:users',
+            'email' => 'required|email|max:255|unique:users',
+            'password' => 'required|min:8|confirmed',
+            'password_confirmation' => 'required|same:password',
         ];
     }
 
     public function messages()
     {
         return [
-            'username.required' => 'Tên tài khoản không được để trống',
-            'username.min' => 'Tên tài khoản phải có tối thiểu 5 ký tự',
-            'username.max' => 'Tên tài khoản có tối đa 255 ký tự',
-            'username.unique' => 'Tên tài khoản đã tồn tại',
-            'email.required' => 'Email không được để trống',
-            'email.email' => 'Email không hợp lệ',
-            'email.unique' => 'Email đã tồn tại',
-            'password.required' => 'Mật khẩu không được để trống',
-            'password.min' => 'Mật khẩu phải có tối thiểu 8 ký tự',
-            'password_confirmation.required' => 'Mật khẩu không được để trống',
-            'password_confirmation.same' => 'Không trùng với mật khẩu',
+            'required' => __('validation.required'),
+            'min' => __('validation.min'),
+            'max' => __('validation.max'),
+            'unique' => __('validation.unique'),
+            'email' => __('validation.email'),
+            'same' => __('validation.same'),
+        ];
+    }
+
+    public function attributes()
+    {
+        return [
+            'username' => 'Tên tài khoản',
+            'email' => 'Email',
+            'password' => 'Mật khẩu',
+            'password_confirmation' => 'Mật khẩu',
         ];
     }
 }

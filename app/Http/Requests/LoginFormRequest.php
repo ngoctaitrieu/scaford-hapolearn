@@ -24,16 +24,25 @@ class LoginFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'username' => 'required',
-            'password' => 'required',
+            'username' => 'required|min:5|max:255',
+            'password' => 'required|min:8',
         ];
     }
 
     public function messages()
     {
         return [
-            'username.required' => 'Tên người dùng bắt buộc phải nhập',
-            'password.required' => 'Mật khẩu bắt buộc phải nhập',
+            'required' => __('validation.required'),
+            'min' => __('validation.min'),
+            'max' => __('validation.max'),
+        ];
+    }
+
+    public function attributes()
+    {
+        return [
+            'username' => 'Tên khoản',
+            'password' => 'Mật khẩu',
         ];
     }
 }
