@@ -53,14 +53,14 @@ class LoginController extends Controller
         ];
 
         if (Auth::attempt($data)) {
-            return redirect('test');
+            return redirect('/');
         }
-        return redirect()->back()->with('error', 'Tên đăng nhập hoặc mật khẩu không đúng');
+        return redirect()->back()->with('error', __('message.login_error'));
     }
 
     public function logout()
     {
         Auth::logout();
-        redirect('/');
+        return redirect('/');
     }
 }

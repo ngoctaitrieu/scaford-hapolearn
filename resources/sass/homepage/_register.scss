@@ -1,0 +1,46 @@
+.register-container {
+  margin: 0;
+  padding-top: 160px;
+  padding-bottom: 100px;
+  background-color: #E5E5E5;
+  font-family: 'UTM BryantLG';
+
+  .register-form {
+    max-width: 32.666667%;
+
+    .card-header-text {
+      text-align: center;
+      font-size: 30px;
+      color: #B2D235;
+      font-weight: 900;
+      background-color: white;
+      border: 0;
+    }
+
+    .input-container {
+      max-width: 100%;
+    }
+
+    .input-container input {
+      background-color: #F5F5F5;
+    }
+
+    .col-form-label {
+      padding-left: 15px;
+    }
+
+    .btn-register-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .btn-register-container button {
+      background-color: #B2D235;
+      color: white;
+      padding:6px 50px;
+      border-radius: 20px;
+      box-shadow: inset 0px 1.5px 2px #6F8710;
+      font-weight: 500;
+    }
+  }
+}
