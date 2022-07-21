@@ -27,4 +27,9 @@ class Review extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function scopeGetReviews($query, $numReview)
+    {
+        return $query->take($numReview);
+    }
 }
