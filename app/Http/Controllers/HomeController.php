@@ -30,11 +30,6 @@ class HomeController extends Controller
         $courseUser = new CourseUser();
         $countLearner = $courseUser->countLearner()->get()->count();
 
-        return view('home', compact('getThreeCourses',
-                                    'getThreeOtherCourses',
-                                    'getReviews',
-                                    'countCourse',
-                                    'countLesson',
-                                    'countLearner'));
+        return view('home', compact('getThreeCourses', 'getThreeOtherCourses', 'getReviews', 'countCourse', 'countLesson', 'countLearner'));
     }
 }
