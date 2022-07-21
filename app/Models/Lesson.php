@@ -29,4 +29,9 @@ class Lesson extends Model
     {
         return $this->belongsTo(Course::class);
     }
+
+    public function scopeCountLesson($query)
+    {
+        return $query;
+    }
 }
