@@ -48,83 +48,39 @@
 <section class="content container-fluid">
     <div class="main-content">
         <div class="row">
-            <div class="col-lg-4">
-                <div class="card">
-                    <div class="card-img">
-                        <img src="{{ asset('images/html-css-js.png') }}" class="card-img-top" alt="Học HTML, CSS và JS">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">HTML/CSS/js Tutorial</h5>
-                        <p class="card-text">I knew hardly anything about HTML, JS, and CSS before entering New Media. I had coded quite a bit, but never touched anything in regards to web development.</p>
-                        <a href="#" class="card-btn btn btn-primary">Take This Course</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card">
-                    <div class="card-img">
-                        <img src="{{ asset('images/laravel.png') }}" class="card-img-top" alt="Học Laravel">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">LARAVEL Tutorial</h5>
-                        <p class="card-text">I knew hardly anything about HTML, JS, and CSS before entering New Media. I had coded quite a bit, but never touched anything in regards to web development.</p>
-                        <a href="#" class="card-btn btn btn-primary">Take This Course</a>
+            @foreach($mainCourses as $course)
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="{{ $course['image'] }}" class="card-img-top" alt="{{ $course['name'] }}">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $course->name }}</h5>
+                            <p class="card-text">{{ $course->description }}</p>
+                            <a href="#" class="card-btn btn btn-primary">Take This Course</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card">
-                    <div class="card-img">
-                        <img src="{{ asset('images/php.png') }}" class="card-img-top" alt="Học PHP">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">PHP Tutorial</h5>
-                        <p class="card-text">I knew hardly anything about HTML, JS, and CSS before entering New Media. I had coded quite a bit, but never touched anything in regards to web development.</p>
-                        <a href="#" class="card-btn btn btn-primary">Take This Course</a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
     <div class="other-content main-content">
         <p class="other-content-header">Other course</p>
         <div class="row">
-            <div class="col-lg-4">
-                <div class="card">
-                    <div class="card-img">
-                        <img src="{{ asset('images/html-css-js.png') }}" class="card-img-top" alt="Học HTML, CSS và JS">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">HTML/CSS/js Tutorial</h5>
-                        <p class="card-text">I knew hardly anything about HTML, JS, and CSS before entering New Media. I had coded quite a bit, but never touched anything in regards to web development.</p>
-                        <a href="#" class="card-btn btn btn-primary">Take This Course</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card">
-                    <div class="card-img">
-                        <img src="{{ asset('images/laravel.png') }}" class="card-img-top" alt="Học Laravel">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">LARAVEL Tutorial</h5>
-                        <p class="card-text">I knew hardly anything about HTML, JS, and CSS before entering New Media. I had coded quite a bit, but never touched anything in regards to web development.</p>
-                        <a href="#" class="card-btn btn btn-primary">Take This Course</a>
+            @foreach($otherCourses as $course)
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="{{ $course['image'] }}" class="card-img-top" alt="{{ $course['name'] }}">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $course->name }}</h5>
+                            <p class="card-text">{{ $course->description }}</p>
+                            <a href="#" class="card-btn btn btn-primary">Take This Course</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card">
-                    <div class="card-img">
-                        <img src="{{ asset('images/php.png') }}" class="card-img-top" alt="Học PHP">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">PHP Tutorial</h5>
-                        <p class="card-text">I knew hardly anything about HTML, JS, and CSS before entering New Media. I had coded quite a bit, but never touched anything in regards to web development.</p>
-                        <a href="#" class="card-btn btn btn-primary">Take This Course</a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
         <div class="view-all-content">
             <a href="#">View All Our Courses</a>
@@ -173,82 +129,28 @@
         What other students turned professionals have to say about us after learning with us and reaching their goals
     </p>
     <div class="feedback-list">
+        @foreach($mainReviews as $review)
         <div class="feedback-item">
             <div class="feedback-comment">
-                “A wonderful course on how to start. Eddie beautifully conveys all essentials of a becoming a good Angular developer. Very glad to have taken this course. Thank you Eddie Bryan.”
+                “{{ $review->message }}”
             </div>
             <div class="feedback-user">
-                <img class="feedback-user-img" src="{{ asset('images/user-img.png') }}" alt="user image">
+                <img class="feedback-user-img" src="{{ $review->user->avatar }}" alt="user image">
                 <div class="feedback-user-info">
-                    <p class="feedback-user-name">Hoang Anh Nguyen</p>
-                    <p class="feedback-user-subject">PHP</p>
+                    <p class="feedback-user-name">{{ $review->user->username }}</p>
+                    <p class="feedback-user-subject">{{ $review->course->name }}</p>
                     <p class="feedback-user-rating">
+                        @for($i = 0 ; $i < $review->rate ; $i++)
                         <i class="fa fa-star checked"></i>
-                        <i class="fa fa-star checked"></i>
-                        <i class="fa fa-star checked"></i>
-                        <i class="fa fa-star checked"></i>
+                        @endfor
+                        @for($i = 0 ; $i < (5 - $review->rate) ; $i++)
                         <i class="fa fa-star"></i>
+                        @endfor
                     </p>
                 </div>
             </div>
         </div>
-        <div class="feedback-item">
-            <div class="feedback-comment">
-                “A wonderful course on how to start. Eddie beautifully conveys all essentials of a becoming a good Angular developer. Very glad to have taken this course. Thank you Eddie Bryan.”
-            </div>
-            <div class="feedback-user">
-                <img class="feedback-user-img" src="{{ asset('images/user-img.png') }}" alt="user image">
-                <div class="feedback-user-info">
-                    <p class="feedback-user-name">Hoang Anh Nguyen</p>
-                    <p class="feedback-user-subject">PHP</p>
-                    <p class="feedback-user-rating">
-                        <i class="fa fa-star checked"></i>
-                        <i class="fa fa-star checked"></i>
-                        <i class="fa fa-star checked"></i>
-                        <i class="fa fa-star checked"></i>
-                        <i class="fa fa-star"></i>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="feedback-item">
-            <div class="feedback-comment">
-                “A wonderful course on how to start. Eddie beautifully conveys all essentials of a becoming a good Angular developer. Very glad to have taken this course. Thank you Eddie Bryan.”
-            </div>
-            <div class="feedback-user">
-                <img class="feedback-user-img" src="{{ asset('images/user-img.png') }}" alt="user image">
-                <div class="feedback-user-info">
-                    <p class="feedback-user-name">Hoang Anh Nguyen</p>
-                    <p class="feedback-user-subject">PHP</p>
-                    <p class="feedback-user-rating">
-                        <i class="fa fa-star checked"></i>
-                        <i class="fa fa-star checked"></i>
-                        <i class="fa fa-star checked"></i>
-                        <i class="fa fa-star checked"></i>
-                        <i class="fa fa-star"></i>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="feedback-item">
-            <div class="feedback-comment">
-                “A wonderful course on how to start. Eddie beautifully conveys all essentials of a becoming a good Angular developer. Very glad to have taken this course. Thank you Eddie Bryan.”
-            </div>
-            <div class="feedback-user">
-                <img class="feedback-user-img" src="{{ asset('images/user-img.png') }}" alt="user image">
-                <div class="feedback-user-info">
-                    <p class="feedback-user-name">Hoang Anh Nguyen</p>
-                    <p class="feedback-user-subject">PHP</p>
-                    <p class="feedback-user-rating">
-                        <i class="fa fa-star checked"></i>
-                        <i class="fa fa-star checked"></i>
-                        <i class="fa fa-star checked"></i>
-                        <i class="fa fa-star checked"></i>
-                        <i class="fa fa-star"></i>
-                    </p>
-                </div>
-            </div>
-        </div>
+        @endforeach
     </div>
 </section>
 
@@ -265,15 +167,15 @@
     <div class="statistic-main">
         <div class="statistic-content">
             <p class="statistic-content-title">Courses</p>
-            <p class="statistic-content-num">1,586</p>
+            <p class="statistic-content-num">{{ $totalCourse }}</p>
         </div>
         <div class="statistic-content">
             <p class="statistic-content-title">Lessons</p>
-            <p class="statistic-content-num">2,689</p>
+            <p class="statistic-content-num">{{ $totalLesson }}</p>
         </div>
         <div class="statistic-content">
             <p class="statistic-content-title">Learners</p>
-            <p class="statistic-content-num">16,882</p>
+            <p class="statistic-content-num">{{ $learners }}</p>
         </div>
     </div>
 </section>

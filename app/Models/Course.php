@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use App\Models\Course as ModelsCourse;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -41,5 +40,15 @@ class Course extends Model
     public function reviews()
     {
         return $this->hasMany(Review::class, 'course_id');
+    }
+
+    public function scopeMainCourses($query)
+    {
+        return $query->take(config('variable.num_courses_home'));
+    }
+
+    public function scopeOtherCourses($query)
+    {
+        return $query->skip(config('variable.skip_courses_home'))->take(config('variable.num_courses_home'));
     }
 }
