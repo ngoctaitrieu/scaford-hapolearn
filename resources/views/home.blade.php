@@ -55,8 +55,8 @@
                             <img src="{{ $course['image'] }}" class="card-img-top" alt="{{ $course['name'] }}">
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">{{ $course['name'] }}</h5>
-                            <p class="card-text">{{ $course['description'] }}</p>
+                            <h5 class="card-title">{{ $course->name }}</h5>
+                            <p class="card-text">{{ $course->description }}</p>
                             <a href="#" class="card-btn btn btn-primary">Take This Course</a>
                         </div>
                     </div>
@@ -74,8 +74,8 @@
                             <img src="{{ $course['image'] }}" class="card-img-top" alt="{{ $course['name'] }}">
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">{{ $course['name'] }}</h5>
-                            <p class="card-text">{{ $course['description'] }}</p>
+                            <h5 class="card-title">{{ $course->name }}</h5>
+                            <p class="card-text">{{ $course->description }}</p>
                             <a href="#" class="card-btn btn btn-primary">Take This Course</a>
                         </div>
                     </div>
@@ -132,7 +132,7 @@
         @foreach($getReviews as $review)
         <div class="feedback-item">
             <div class="feedback-comment">
-                “{{ $review['message'] }}”
+                “{{ $review->message }}”
             </div>
             <div class="feedback-user">
                 <img class="feedback-user-img" src="{{ $review->user->avatar }}" alt="user image">
@@ -140,10 +140,10 @@
                     <p class="feedback-user-name">{{ $review->user->username }}</p>
                     <p class="feedback-user-subject">{{ $review->course->name }}</p>
                     <p class="feedback-user-rating">
-                        @for($i = 0 ; $i < $review['rate'] ; $i++)
+                        @for($i = 0 ; $i < $review->rate ; $i++)
                         <i class="fa fa-star checked"></i>
                         @endfor
-                        @for($i = 0 ; $i < (5 - $review['rate']) ; $i++)
+                        @for($i = 0 ; $i < (5 - $review->rate) ; $i++)
                         <i class="fa fa-star"></i>
                         @endfor
                     </p>

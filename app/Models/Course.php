@@ -42,13 +42,13 @@ class Course extends Model
         return $this->hasMany(Review::class, 'course_id');
     }
 
-    public function scopeGetCourses($query, $skipCourses, $numCourses)
+    public function scopeMainCourses($query)
     {
-        return $query->skip($skipCourses)->take($numCourses);
+        return $query->take(config('variable.num_courses_home'));
     }
 
-    public function scopeCountCourse($query)
+    public function scopeOtherCourses($query)
     {
-        return $query;
+        return $query->skip(config('variable.skip_courses_home'))->take(config('variable.num_courses_home'));
     }
 }
