@@ -28,7 +28,7 @@ class Review extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function scopeGetReviews($query)
+    public function scopeMainReviews($query)
     {
         return $query->take(config('variable.num_reviews_home'));
     }

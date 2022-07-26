@@ -48,7 +48,7 @@
 <section class="content container-fluid">
     <div class="main-content">
         <div class="row">
-            @foreach($getThreeCourses as $course)
+            @foreach($mainCourses as $course)
                 <div class="col-lg-4">
                     <div class="card">
                         <div class="card-img">
@@ -67,7 +67,7 @@
     <div class="other-content main-content">
         <p class="other-content-header">Other course</p>
         <div class="row">
-            @foreach($getThreeOtherCourses as $course)
+            @foreach($otherCourses as $course)
                 <div class="col-lg-4">
                     <div class="card">
                         <div class="card-img">
@@ -129,7 +129,7 @@
         What other students turned professionals have to say about us after learning with us and reaching their goals
     </p>
     <div class="feedback-list">
-        @foreach($getFourReviews as $review)
+        @foreach($mainReviews as $review)
         <div class="feedback-item">
             <div class="feedback-comment">
                 “{{ $review->message }}”
@@ -167,11 +167,11 @@
     <div class="statistic-main">
         <div class="statistic-content">
             <p class="statistic-content-title">Courses</p>
-            <p class="statistic-content-num">{{ $countCourse }}</p>
+            <p class="statistic-content-num">{{ $totalCourse }}</p>
         </div>
         <div class="statistic-content">
             <p class="statistic-content-title">Lessons</p>
-            <p class="statistic-content-num">{{ $countLesson }}</p>
+            <p class="statistic-content-num">{{ $totalLesson }}</p>
         </div>
         <div class="statistic-content">
             <p class="statistic-content-title">Learners</p>

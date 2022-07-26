@@ -16,13 +16,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $getThreeCourses = Course::mainCourses()->get();
-        $getThreeOtherCourses = Course::otherCourses()->get();
-        $countCourse = Course::count();
-        $getFourReviews = Review::getReviews()->get();
-        $countLesson = Lesson::count();
-        $learners = CourseUser::countLearner()->get()->count();
+        $mainCourses = Course::mainCourses()->get();
+        $otherCourses = Course::otherCourses()->get();
+        $totalCourse = Course::count();
+        $mainReviews = Review::mainReviews()->get();
+        $totalLesson = Lesson::count();
+        $learners = CourseUser::learners()->get()->count();
 
-        return view('home', compact('getThreeCourses', 'getThreeOtherCourses', 'getFourReviews', 'countCourse', 'countLesson', 'learners'));
+        return view('home', compact('mainCourses', 'otherCourses', 'mainReviews', 'totalCourse', 'totalLesson', 'learners'));
     }
 }
