@@ -16,19 +16,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $course = new Course();
-        $getThreeCourses = $course->mainCourses()->get();
-        $getThreeOtherCourses = $course->otherCourses()->get();
-        $countCourse = $course->count();
-
-        $review = new Review();
-        $getReviews = $review->getReviews()->get();
-
-        $lesson = new Lesson();
-        $countLesson = $lesson->count();
-
-        $courseUser = new CourseUser();
-        $countLearner = $courseUser->countLearner()->get()->count();
+        $getThreeCourses = Course::mainCourses()->get();
+        $getThreeOtherCourses = Course::otherCourses()->get();
+        $countCourse = Course::count();
+        $getReviews = Review::getReviews()->get();
+        $countLesson = Lesson::count();
+        $countLearner = CourseUser::countLearner()->get()->count();
 
         return view('home', compact('getThreeCourses', 'getThreeOtherCourses', 'getReviews', 'countCourse', 'countLesson', 'countLearner'));
     }
