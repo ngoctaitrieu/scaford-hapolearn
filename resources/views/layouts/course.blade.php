@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container-fluid course-container">
+    <section class="container-fluid course-container">
         <div class="container course-content">
             <form action="" method="get">
                 <div class="search-form">
@@ -79,32 +79,106 @@
                 </div>
             </div>
 
-            <div class="course-list">
-                <div class="course-item col-md-6">
-                    <div class="course-item-content">
-                        <img class="course-item-img" src="https://play-lh.googleusercontent.com/85WnuKkqDY4gf6tndeL4_Ng5vgRk7PTfmpI4vHMIosyq6XQ7ZGDXNtYG2s0b09kJMw=w240-h480-rw" alt="HTML Fundammentals">
-                        <div class="course-item-text">
-                            <h3 class="course-item-title">HTML Fundammentals</h3>
-                            <p class="course-item-intro">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum neque blanditiis provident vitae adipisci. Doloribus sit aspernatur qui veniam eum. Aperiam itaque incidunt dolorum sunt error voluptas nesciunt maiores impedit.</p>
+            <div class="container course-list">
+                <div class="row">
+                    <div class="course-item col-md-5">
+                        <div class="course-item-content">
+                            <img class="course-item-img" src="https://play-lh.googleusercontent.com/85WnuKkqDY4gf6tndeL4_Ng5vgRk7PTfmpI4vHMIosyq6XQ7ZGDXNtYG2s0b09kJMw=w240-h480-rw" alt="HTML Fundammentals">
+                            <div class="course-item-text">
+                                <h3 class="course-item-title">HTML Fundammentals</h3>
+                                <p class="course-item-intro">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum neque blanditiis provident vitae adipisci. Doloribus sit aspernatur qui veniam eum. Aperiam itaque incidunt dolorum sunt error voluptas nesciunt maiores impedit.</p>
+                            </div>
+                        </div>
+                        <a class="course-item-btn" href="#">More</a>
+                        <div class="course-item-info">
+                            <div class="course-item-info-title">
+                                <span>Learners</span>
+                                <span class="course-item-num">18282</span>
+                            </div>
+                            <div class="course-item-info-title">
+                                <span>Lessons</span>
+                                <span class="course-item-num">338</span>
+                            </div>
+                            <div class="course-item-info-title">
+                                <span>Times</span>
+                                <span class="course-item-num">100(h)</span>
+                            </div>
                         </div>
                     </div>
-                    <a class="course-item-btn" href="#">More</a>
-                    <div class="course-item-info">
-                        <div class="course-item-info-title">
-                            <span>Learners</span>
-                            <span>18282</span>
+                    <div class="course-item col-md-5">
+                        <div class="course-item-content">
+                            <img class="course-item-img" src="https://play-lh.googleusercontent.com/85WnuKkqDY4gf6tndeL4_Ng5vgRk7PTfmpI4vHMIosyq6XQ7ZGDXNtYG2s0b09kJMw=w240-h480-rw" alt="HTML Fundammentals">
+                            <div class="course-item-text">
+                                <h3 class="course-item-title">HTML Fundammentals</h3>
+                                <p class="course-item-intro">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum neque blanditiis provident vitae adipisci. Doloribus sit aspernatur qui veniam eum. Aperiam itaque incidunt dolorum sunt error voluptas nesciunt maiores impedit.</p>
+                            </div>
                         </div>
-                        <div class="course-item-info-title">
-                            <span>Lessons</span>
-                            <span>338</span>
+                        <a class="course-item-btn" href="#">More</a>
+                        <div class="course-item-info">
+                            <div class="course-item-info-title">
+                                <span>Learners</span>
+                                <span class="course-item-num">18282</span>
+                            </div>
+                            <div class="course-item-info-title">
+                                <span>Lessons</span>
+                                <span class="course-item-num">338</span>
+                            </div>
+                            <div class="course-item-info-title">
+                                <span>Times</span>
+                                <span class="course-item-num">100(h)</span>
+                            </div>
                         </div>
-                        <div class="course-item-info-title">
-                            <span>Times</span>
-                            <span>100</span>(h)
+                    </div>
+                    <div class="course-item col-md-5">
+                        <div class="course-item-content">
+                            <img class="course-item-img" src="https://play-lh.googleusercontent.com/85WnuKkqDY4gf6tndeL4_Ng5vgRk7PTfmpI4vHMIosyq6XQ7ZGDXNtYG2s0b09kJMw=w240-h480-rw" alt="HTML Fundammentals">
+                            <div class="course-item-text">
+                                <h3 class="course-item-title">HTML Fundammentals</h3>
+                                <p class="course-item-intro">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum neque blanditiis provident vitae adipisci. Doloribus sit aspernatur qui veniam eum. Aperiam itaque incidunt dolorum sunt error voluptas nesciunt maiores impedit.</p>
+                            </div>
+                        </div>
+                        <a class="course-item-btn" href="#">More</a>
+                        <div class="course-item-info">
+                            <div class="course-item-info-title">
+                                <span>Learners</span>
+                                <span class="course-item-num">18282</span>
+                            </div>
+                            <div class="course-item-info-title">
+                                <span>Lessons</span>
+                                <span class="course-item-num">338</span>
+                            </div>
+                            <div class="course-item-info-title">
+                                <span>Times</span>
+                                <span class="course-item-num">100(h)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-item col-md-5">
+                        <div class="course-item-content">
+                            <img class="course-item-img" src="https://play-lh.googleusercontent.com/85WnuKkqDY4gf6tndeL4_Ng5vgRk7PTfmpI4vHMIosyq6XQ7ZGDXNtYG2s0b09kJMw=w240-h480-rw" alt="HTML Fundammentals">
+                            <div class="course-item-text">
+                                <h3 class="course-item-title">HTML Fundammentals</h3>
+                                <p class="course-item-intro">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum neque blanditiis provident vitae adipisci. Doloribus sit aspernatur qui veniam eum. Aperiam itaque incidunt dolorum sunt error voluptas nesciunt maiores impedit.</p>
+                            </div>
+                        </div>
+                        <a class="course-item-btn" href="#">More</a>
+                        <div class="course-item-info">
+                            <div class="course-item-info-title">
+                                <span>Learners</span>
+                                <span class="course-item-num">18282</span>
+                            </div>
+                            <div class="course-item-info-title">
+                                <span>Lessons</span>
+                                <span class="course-item-num">338</span>
+                            </div>
+                            <div class="course-item-info-title">
+                                <span>Times</span>
+                                <span class="course-item-num">100(h)</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 @endsection
