@@ -175,7 +175,7 @@
         </div>
         <div class="statistic-content">
             <p class="statistic-content-title">Learners</p>
-            <p class="statistic-content-num">{{ $countLearner }}</p>
+            <p class="statistic-content-num">{{ $learners }}</p>
         </div>
     </div>
 </section>
