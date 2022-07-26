@@ -129,7 +129,7 @@
         What other students turned professionals have to say about us after learning with us and reaching their goals
     </p>
     <div class="feedback-list">
-        @foreach($getReviews as $review)
+        @foreach($getFourReviews as $review)
         <div class="feedback-item">
             <div class="feedback-comment">
                 “{{ $review->message }}”
