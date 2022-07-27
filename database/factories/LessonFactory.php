@@ -21,6 +21,7 @@ class LessonFactory extends Factory
             'course_id' => $this->faker->randomElement(Course::pluck('id')),
             'name' => $this->faker->name(),
             'image' => $this->faker->imageUrl(100, 100),
+            'time' => $this->faker->numberBetween(1, 3),
         ];
     }
 }

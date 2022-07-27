@@ -15,7 +15,7 @@ class CourseUsersTableSeeder extends Seeder
     public function run()
     {
         CourseUser::factory()
-        ->count(10)
+        ->count(1000)
         ->create();
     }
 }
