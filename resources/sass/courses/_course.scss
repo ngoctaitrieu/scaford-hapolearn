@@ -2,6 +2,7 @@
   margin-top: 108px;
   background-color: #F2F2F2;
   font-family: 'UTM BryantLG';
+  min-height: 60vh;
 
   .course-content {
     padding-top: 40px;
@@ -40,8 +41,7 @@
       top: 5px;
       right: 6px;
       font-size: 18px;
-      background-color: white;
-      padding: 3px;
+      padding: 4px;
       color: #505353;
     }
 
@@ -61,9 +61,10 @@
     border: 1px solid #C4C4C4;
     border-radius: 4px;
     margin-top: 20px;
-    display: flex;
+    display: none;
     padding: 4px 20px;
     min-height: 100px;
+    display: none;
 
     span {
       font-size: 16px;
@@ -82,34 +83,33 @@
       align-items: center;
     }
 
-    .filter-new,
-    .filter-old {
-      display: block;
-      font-size: 14px;
-      border-radius: 2px;
-      padding: 6px 10px;
-      width: 80px;
-      text-align: center;
-      text-decoration: none;
+    input[type="radio"] {
+      display: none;
     }
 
-    .filter-new {
-      color: white;
-      background-color: #B2D235;
-      margin-left: 10px;
-    }
-
-    .filter-old {
+    label {
+      width: 90px;
       color: #505353;
-      background-color: #E5E6E7;
+      font-weight: 900;
+      border-radius: 2px;
       margin-left: 10px;
+      margin-bottom: 0;
+      padding: 5px 14px;
+      text-align: center;
+      background-color: #E5E6E7;
+      cursor: pointer;
+    }
+
+    input[type="radio"]:checked + label {
+      background-color: #B2D235;
+      color: white;
     }
 
     .filter-option-container {
-      border: 1px solid #E5E6E7;
       border-radius: 2px;
       padding: 4px;
       width: 180px;
+      height: 32px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -118,6 +118,48 @@
       padding-left: 10px;
       position: relative;
       cursor: default;
+    }
+
+    .filter-option-container select {
+      color: #505353;
+    }
+
+    .filter-border {
+      border: 0;
+      padding: 0;
+    }
+
+    .filter-teacher-title {
+      position: absolute;
+      left: 8px;
+    }
+
+    .filter-teacher-icon {
+      position: absolute;
+      right: 8px;
+    }
+
+    .select2-container--default
+    .select2-selection--multiple {
+      background-color: transparent;
+      z-index: 2;
+      max-height: 36px;
+      overflow-y: auto;
+      border: 1px solid #E5E6E7;
+    }
+
+    .select2-container--default
+    .select2-selection--multiple:focus-within {
+      background-color: white;
+    }
+
+    .select2.select2-container.select2-container--default {
+      width: 100% !important;
+    }
+
+    .select2-selection.select2-selection--single {
+      height: 32px;
+      border-color: #E5E6E7;
     }
 
     .filter-option-container:hover .filter-option{
@@ -157,6 +199,10 @@
     .filter-option li:last-child a {
       border: 0;
     }
+  }
+
+  .filter-show {
+    display: flex;
   }
 
   .course-list {

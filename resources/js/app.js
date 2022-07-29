@@ -5,9 +5,13 @@
  */
 
 import 'slick-carousel/slick/slick';
+import 'select2';
 
 require('./bootstrap');
 require('./slickk');
+require('./select2');
+require('./filter');
+
 
 window.Vue = require('vue').default;
 
@@ -48,3 +52,4 @@ overlay.addEventListener('click', ()=> {
     menu.classList.toggle("overlay-open");
     overlay.classList.toggle("overlay-open");
 });
+
