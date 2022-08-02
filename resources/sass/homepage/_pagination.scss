@@ -1,0 +1,49 @@
+.pagination {
+  justify-content: flex-end;
+  margin: 0;
+  padding-top: 40px;
+  padding-bottom: 20px;
+
+  li {
+    height: 30px;
+    width: 30px;
+    border: 1px solid #B2D235;
+    margin: 0 4px;
+    border-radius: 4px;
+
+    a,
+    span {
+      display: block;
+      text-align: center;
+      line-height: 30px;
+      font-weight: 700;
+      color: #B2D235;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  li:first-child,
+  li:last-child {
+    width: 60px;
+  }
+
+  .disabled,
+  .active {
+    background-color: #B2D235;
+
+    span {
+      color: white;
+    }
+  }
+
+  .three-dot {
+    background-color: transparent;
+
+    span {
+      color: #B2D235;
+    }
+  }
+}

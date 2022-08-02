@@ -2,26 +2,22 @@
 
 namespace Database\Factories;
 
-use App\Models\Course;
-use App\Models\Lesson;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Course;
+use App\Models\Tag;
 
-class LessonFactory extends Factory
+class CourseTagFactory extends Factory
 {
     /**
      * Define the model's default state.
      *
      * @return array
      */
-    protected $model = Lesson::class;
-
     public function definition()
     {
         return [
             'course_id' => $this->faker->randomElement(Course::pluck('id')),
-            'name' => $this->faker->name(),
-            'image' => $this->faker->imageUrl(100, 100),
-            'time' => $this->faker->numberBetween(1, 3),
+            'tag_id' => $this->faker->randomElement(Tag::pluck('id')),
         ];
     }
 }

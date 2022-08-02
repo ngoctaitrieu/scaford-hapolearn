@@ -9,6 +9,8 @@ use Database\Seeders\LessonsTableSeeder as LessonsTableSeeder;
 use Database\Seeders\ProgramsTableSeeder as ProgramsTableSeeder;
 use Database\Seeders\ReviewsTableSeeder as ReviewsTableSeeder;
 use Database\Seeders\TagsTableSeeder as TagsTableSeeder;
+use Database\Seeders\CourseTeachersTableSeeder as CourseTeachersTableSeeder;
+use Database\Seeders\CourseTagsTableSeeder as CourseTagsTableSeeder;
 
 use Illuminate\Database\Seeder;
 
@@ -28,5 +30,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ProgramsTableSeeder::class);
         $this->call(ReviewsTableSeeder::class);
         $this->call(TagsTableSeeder::class);
+        $this->call(CourseTeachersTableSeeder::class);
+        $this->call(CourseTagsTableSeeder::class);
     }
 }
