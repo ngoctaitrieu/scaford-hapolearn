@@ -91,18 +91,18 @@
                                     <p class="course-item-intro">{{ $course->description }}</p>
                                 </div>
                             </div>
-                            <a class="course-item-btn" href="#">More</a>
+                            <a class="course-item-btn" href="#">{{ __('course.more') }}</a>
                             <div class="course-item-info">
                                 <div class="course-item-info-title">
-                                    <span>Learners</span>
+                                    <span>{{ __('course.learners') }}</span>
                                     <span class="course-item-num">{{ $course->totallearners }}</span>
                                 </div>
                                 <div class="course-item-info-title">
-                                    <span>Lessons</span>
+                                    <span>{{ __('course.lessons') }}</span>
                                     <span class="course-item-num">{{ $course->totallessons }}</span>
                                 </div>
                                 <div class="course-item-info-title">
-                                    <span>Times</span>
+                                    <span>{{ __('course.times') }}</span>
                                     <span class="course-item-num">{{ $course->totaltimes }}(h)</span>
                                 </div>
                             </div>
@@ -112,7 +112,7 @@
             </div>
             {{ $courses->appends(request()->query())->links() }}
             @if(count($courses) == 0)
-                <h3>Không tìm thấy kết quả nào</h3>
+                <h3>{{ __('course.no_result') }}</h3>
             @endif
         </div>
     </section>

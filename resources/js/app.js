@@ -9,7 +9,7 @@ import 'select2';
 
 require('./bootstrap');
 require('./slickk');
-require('./select2');
+require('./course-select2');
 require('./filter');
 
 

@@ -15,4 +15,9 @@ return [
     'review' => 'Đánh giá',
     'ascending' => 'Tăng dần',
     'descending' => 'Giảm dần',
+    'no_result' => 'Không tìm thấy kết quả nào',
+    'more' => "Xem",
+    'learners' => 'Số người học',
+    'lessons' => 'Số bài học',
+    'times' => 'Thời gian',
 ];

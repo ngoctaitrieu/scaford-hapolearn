@@ -15,4 +15,9 @@ return [
     'review' => 'Review',
     'ascending' => 'Ascending',
     'descending' => 'Descending',
+    'no_result' => 'No result found',
+    'more' => "More",
+    'learners' => 'Learners',
+    'lessons' => 'Lessons',
+    'times' => 'Times',
 ];

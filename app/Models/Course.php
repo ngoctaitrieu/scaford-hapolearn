@@ -70,15 +70,18 @@ class Course extends Model
     public function scopeSearch($query, $data)
     {
         if (isset($data['keyword'])) {
-            $query->where('name', 'LIKE', "%".$data['keyword']."%")
-                    ->orWhere('description', 'LIKE', "%".$data['keyword']."%");
+            $query->where('name', 'LIKE', "%" . $data['keyword'] . "%")->orWhere('description', 'LIKE', "%" . $data['keyword'] . "%");
         }
 
-            (isset($data['created_time']) && $data['created_time'] == config('variable.sort_by_newest')) ? $query->orderBy('created_at', config('variable.orderby_direction')) : $query->orderBy('created_at');
+        if(isset($data['created_time']) && $data['created_time'] == config('variable.sort_by_newest')) {
+            $query->orderBy('created_at', config('variable.orderby_direction'));
+        } else {
+            $query->orderBy('created_at');
+        }
 
         if (isset($data['teachers'])) {
             $query->whereHas('teachers', function ($query) use ($data) {
-                    $query->whereIn('user_id', $data['teachers']);
+                $query->whereIn('user_id', $data['teachers']);
             });
         }
 
