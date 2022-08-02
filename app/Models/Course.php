@@ -73,7 +73,7 @@ class Course extends Model
             $query->where('name', 'LIKE', "%" . $data['keyword'] . "%")->orWhere('description', 'LIKE', "%" . $data['keyword'] . "%");
         }
 
-        if(isset($data['created_time']) && $data['created_time'] == config('variable.sort_by_newest')) {
+        if (isset($data['created_time']) && $data['created_time'] == config('variable.sort_by_newest')) {
             $query->orderBy('created_at', config('variable.orderby_direction'));
         } else {
             $query->orderBy('created_at');
