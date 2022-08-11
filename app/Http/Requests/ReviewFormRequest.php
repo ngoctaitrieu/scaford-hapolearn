@@ -26,7 +26,7 @@ class ReviewFormRequest extends FormRequest
         return [
             'message' => 'required|string|max:500',
             'course_id' => 'required|integer',
-            'parent_id' =>'nullable|integer',
+            'parent_id' => 'nullable|integer',
             'rate' => 'nullable',
         ];
     }

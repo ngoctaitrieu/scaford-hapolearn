@@ -32,8 +32,9 @@ class Lesson extends Model
 
     public function scopeSearch($query, $data)
     {
-        if(isset($data['keyword']))
+        if (isset($data['keyword'])) {
             return $query->where('name', 'LIKE', '%' . $data['keyword'] . '%');
+        }
         return $query;
     }
 }

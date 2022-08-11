@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Auth;
 Auth::routes();
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::resource('courses', CourseController::class)->only(['index', 'show']);
-Route::group(['middleware' => 'auth'], function() {
+Route::group(['middleware' => 'auth'], function () {
     Route::resource('reviews', ReviewController::class)->only(['store'])->middleware('canReview');
     Route::resource('reviews', ReviewController::class)->only(['destroy', 'update']);
     Route::resource('course-users', CourseUserController::class)->only(['store', 'destroy', 'update']);

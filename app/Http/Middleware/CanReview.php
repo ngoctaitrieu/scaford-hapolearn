@@ -21,7 +21,8 @@ class CanReview
         if (!$course->isJoined()->count() || $course->isFinished()->count()) {
             return redirect()->back()->with('message', __('course-detail.need_join'));
         }
-        else if ($course->userReviewed()->count() && !isset($request['parent_id'])) {
+        
+        if ($course->userReviewed()->count() && !isset($request['parent_id'])) {
             return redirect()->back()->with('message', __('course-detail.just_one_reviews'));
         }
         

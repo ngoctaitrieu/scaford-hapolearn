@@ -99,7 +99,7 @@ class Course extends Model
 
     public function getAvgStarAttribute()
     {
-        return round($this->reviews->where('parent_id', 0)->avg('rate'),1);
+        return round($this->reviews->where('parent_id', 0)->avg('rate'), 1);
     }
 
     public function getReviewRatingAttribute()
@@ -109,17 +109,20 @@ class Course extends Model
 
     public function getCoursePriceAttribute()
     {
-        if ($this->price > 0)
+        if ($this->price > 0) {
             return $this->price;
+        }
         return __('course-detail.free');
     }
 
     public function getCourseStatusAttribute()
     {
-        if (!$this->isJoined()->count())
+        if (!$this->isJoined()->count()) {
             return __('course-detail.not_join');
-        if ($this->isFinished()->count())
+        }
+        if ($this->isFinished()->count()) {
             return __('course-detail.completed');
+        }
         return __('course-detail.learning');
     }
 

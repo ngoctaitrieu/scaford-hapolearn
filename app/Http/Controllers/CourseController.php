@@ -47,6 +47,7 @@ class CourseController extends Controller
             'data',
             'isJoined',
             'isFinished',
-            'userReviewed'));
+            'userReviewed'
+        ));
     }
 }
