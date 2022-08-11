@@ -35,6 +35,6 @@ class Review extends Model
 
     public function checkUserReview()
     {
-        return ($this->user_id) == auth()->id();
+        return $this['user_id'] == auth()->id();
     }
 }
