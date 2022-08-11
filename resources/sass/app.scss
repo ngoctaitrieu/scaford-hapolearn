@@ -12,6 +12,9 @@
 //Select2
 @import "~select2/dist/css/select2.css";
 
+//RateYo
+@import "~rateyo/lib/cjs/rateyo.min.css";
+
 // Variables
 @import 'variables';
 
@@ -23,3 +26,4 @@
 @import 'homepage/register';
 @import 'courses/course';
 @import 'homepage/pagination';
+@import 'courses/show';

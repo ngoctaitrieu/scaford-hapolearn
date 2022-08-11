@@ -29,4 +29,11 @@ class Lesson extends Model
     {
         return $this->belongsTo(Course::class);
     }
+
+    public function scopeSearch($query, $data)
+    {
+        if(isset($data['keyword']))
+            return $query->where('name', 'LIKE', '%' . $data['keyword'] . '%');
+        return $query;
+    }
 }

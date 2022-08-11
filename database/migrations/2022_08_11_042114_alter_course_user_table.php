@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class UpdateSoftDeleteInLessonsTable extends Migration
+class AlterCourseUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class UpdateSoftDeleteInLessonsTable extends Migration
      */
     public function up()
     {
-        Schema::table('lessons', function (Blueprint $table) {
+        Schema::table('course_user', function (Blueprint $table) {
             $table->softDeletes();
         });
     }
@@ -25,7 +25,7 @@ class UpdateSoftDeleteInLessonsTable extends Migration
      */
     public function down()
     {
-        Schema::table('lessons', function (Blueprint $table) {
+        Schema::table('course_user', function (Blueprint $table) {
             $table->dropSoftDeletes();
         });
     }

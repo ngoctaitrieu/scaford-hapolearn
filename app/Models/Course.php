@@ -24,7 +24,7 @@ class Course extends Model
 
     public function users()
     {
-        return $this->belongsToMany(User::class, 'course_user', 'course_id', 'user_id');
+        return $this->belongsToMany(User::class, 'course_user', 'course_id', 'user_id')->withTimestamps();
     }
 
     public function teachers()
@@ -65,6 +65,83 @@ class Course extends Model
     public function getTotalTimesAttribute()
     {
         return $this->lessons()->sum(config('variable.sum'));
+    }
+
+    public function getTotalReviewsAttribute()
+    {
+        return $this->reviews()->count();
+    }
+
+    public function getFiveStarsAttribute()
+    {
+        return $this->reviews()->where('rate', 5)->count();
+    }
+
+    public function getFourStarsAttribute()
+    {
+        return $this->reviews()->where('rate', 4)->count();
+    }
+
+    public function getThreeStarsAttribute()
+    {
+        return $this->reviews()->where('rate', 3)->count();
+    }
+
+    public function getTwoStarsAttribute()
+    {
+        return $this->reviews()->where('rate', 2)->count();
+    }
+
+    public function getOneStarsAttribute()
+    {
+        return $this->reviews()->where('rate', 1)->count();
+    }
+
+    public function getAvgStarAttribute()
+    {
+        return round($this->reviews->where('parent_id', 0)->avg('rate'),1);
+    }
+
+    public function getReviewRatingAttribute()
+    {
+        return $this->reviews()->where('parent_id', 0)->count();
+    }
+
+    public function getCoursePriceAttribute()
+    {
+        if ($this->price > 0)
+            return $this->price;
+        return __('course-detail.free');
+    }
+
+    public function getCourseStatusAttribute()
+    {
+        if (!$this->isJoined()->count())
+            return __('course-detail.not_join');
+        if ($this->isFinished()->count())
+            return __('course-detail.completed');
+        return __('course-detail.learning');
+    }
+
+    public function isJoined()
+    {
+        return $this->users()->whereExists(function ($query) {
+            $query->where('users.id', auth()->id());
+        });
+    }
+
+    public function userReviewed()
+    {
+        return $this->reviews()->where('parent_id', 0)->where('deleted_at', null)->whereExists(function ($query) {
+            $query->where('user_id', auth()->id());
+        });
+    }
+
+    public function isFinished()
+    {
+        return $this->users()->whereExists(function ($query) {
+            $query->where('users.id', auth()->id());
+        })->whereNotNull('course_user.deleted_at');
     }
 
     public function scopeSearch($query, $data)

@@ -23,4 +23,30 @@ class CourseController extends Controller
 
         return view('courses.index', compact('teachers', 'tags', 'courses', 'data'));
     }
+
+    public function show($id, Request $request)
+    {
+        $data = $request->all();
+        $courseDetail = Course::find($id);
+        $courseTags = $courseDetail->tags;
+        $courseLessons = $courseDetail->lessons()->search($data)->paginate(config('variable.paginate_10'));
+        $otherCourses = Course::otherCourses()->whereNotIn('id', [$id])->get();
+        $teacherCourses = $courseDetail->teachers;
+        $userReviews = $courseDetail->reviews()->get();
+        $isJoined = $courseDetail->isJoined()->count();
+        $isFinished = $courseDetail->isFinished()->count();
+        $userReviewed = $courseDetail->userReviewed()->count();
+
+        return view('courses.show', compact(
+            'courseDetail',
+            'courseTags',
+            'courseLessons',
+            'otherCourses',
+            'teacherCourses',
+            'userReviews',
+            'data',
+            'isJoined',
+            'isFinished',
+            'userReviewed'));
+    }
 }
