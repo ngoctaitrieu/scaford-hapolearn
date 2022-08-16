@@ -4,6 +4,7 @@ use App\Http\Controllers\CourseController;
 use App\Http\Controllers\CourseUserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ReviewController;
 use Illuminate\Support\Facades\Auth;
 
@@ -24,4 +25,5 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('reviews', ReviewController::class)->only(['store'])->middleware('canReview');
     Route::resource('reviews', ReviewController::class)->only(['destroy', 'update']);
     Route::resource('course-users', CourseUserController::class)->only(['store', 'destroy', 'update']);
+    Route::resource('profiles', ProfileController::class);
 });

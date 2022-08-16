@@ -19,8 +19,8 @@
                 <li class="nav-item {{ (Request::route()->getName() == 'courses.index') ? 'active' : '' }}">
                     <a class="nav-link" href="{{ route('courses.index') }}">ALL COURSES</a>
                 </li>
-                <li class="nav-item {{ (Request::route()->getName() == 'profile') ? 'active' : '' }}">
-                    <a class="nav-link" href="#">PROFILE</a>
+                <li class="nav-item {{ (Request::route()->getName() == 'profiles') ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('profiles.index') }}">PROFILE</a>
                 </li>
                 <li class="nav-item {{ ((Request::route()->getName() == 'login') || (Request::route()->getName() == 'register')) ? 'active' : '' }}">
                     @if(Auth::check())
