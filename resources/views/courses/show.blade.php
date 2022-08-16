@@ -109,7 +109,7 @@
                                     @endforeach
                                 </div>
                                 <div class="tab-pane fade course-detail-reviews  @if(session('status')) show active @endif" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-                                    <h3 class="reviews-heading"><span>{{ $courseDetail->totalreviews }}</span> {{ __('course-detail.comment') }}</h3>
+                                    <h3 class="reviews-heading"><span>{{ $courseDetail->reviewrating }}</span> {{ __('course-detail.comment') }}</h3>
                                     <div class="review-stars">
                                         <div class="review-stars-total">
                                             <span class="review-stars-point">{{ $courseDetail->avgstar }}</span>
@@ -121,35 +121,35 @@
                                             <div>
                                                 <span class="review-stars-name">5 stars</span>
                                                 <span class="review-stars-range">
-                                                    <span class="star-range-progress" style="width: {{ ($courseDetail->fivestars > 0) ? (($courseDetail->fivestars / $courseDetail->totalreviews) * 100) : 0 }}%"></span>
+                                                    <span class="star-range-progress" style="width: {{ ($courseDetail->fivestars > 0) ? (($courseDetail->fivestars / $courseDetail->reviewrating) * 100) : 0 }}%"></span>
                                                 </span>
                                                 <span class="review-stars-num">{{ $courseDetail->fivestars }}</span>
                                             </div>
                                             <div>
                                                 <span class="review-stars-name">4 stars</span>
                                                 <span class="review-stars-range">
-                                                    <span class="star-range-progress" style="width: {{ ($courseDetail->fourstars > 0) ? (($courseDetail->fourstars / $courseDetail->totalreviews) * 100) : 0 }}%"></span>
+                                                    <span class="star-range-progress" style="width: {{ ($courseDetail->fourstars > 0) ? (($courseDetail->fourstars / $courseDetail->reviewrating) * 100) : 0 }}%"></span>
                                                 </span>
                                                 <span class="review-stars-num">{{ $courseDetail->fourstars }}</span>
                                             </div>
                                             <div>
                                                 <span class="review-stars-name">3 stars</span>
                                                 <span class="review-stars-range">
-                                                    <span class="star-range-progress" style="width: {{ ($courseDetail->threestars > 0) ? (($courseDetail->threestars / $courseDetail->totalreviews) * 100) : 0 }}%"></span>
+                                                    <span class="star-range-progress" style="width: {{ ($courseDetail->threestars > 0) ? (($courseDetail->threestars / $courseDetail->reviewrating) * 100) : 0 }}%"></span>
                                                 </span>
                                                 <span class="review-stars-num">{{ $courseDetail->threestars }}</span>
                                             </div>
                                             <div>
                                                 <span class="review-stars-name">2 stars</span>
                                                 <span class="review-stars-range">
-                                                <span class="star-range-progress" style="width: {{ ($courseDetail->twostars > 0) ? (($courseDetail->twostars / $courseDetail->totalreviews) * 100) : 0 }}%"></span>
+                                                <span class="star-range-progress" style="width: {{ ($courseDetail->twostars > 0) ? (($courseDetail->twostars / $courseDetail->reviewrating) * 100) : 0 }}%"></span>
                                                 </span>
                                                 <span class="review-stars-num">{{ $courseDetail->twostars }}</span>
                                             </div>
                                             <div>
                                                 <span class="review-stars-name">1 stars</span>
                                                 <span class="review-stars-range">
-                                                <span class="star-range-progress" style="width: {{ ($courseDetail->onestars > 0) ? (($courseDetail->onestars / $courseDetail->totalreviews) * 100) : 0 }}%"></span>
+                                                <span class="star-range-progress" style="width: {{ ($courseDetail->onestars > 0) ? (($courseDetail->onestars / $courseDetail->reviewrating) * 100) : 0 }}%"></span>
                                                 </span>
                                                 <span class="review-stars-num">{{ $courseDetail->onestars }}</span>
                                             </div>

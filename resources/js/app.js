@@ -6,12 +6,12 @@
 
 import 'slick-carousel/slick/slick';
 import 'select2';
-import 'rateyo';
 
 require('./bootstrap');
 require('./slickk');
 require('./course-select2');
 require('./filter');
+require('./rateYo');
 require('./review-rating');
 require('./review');
 

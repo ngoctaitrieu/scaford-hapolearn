@@ -67,11 +67,6 @@ class Course extends Model
         return $this->lessons()->sum(config('variable.sum'));
     }
 
-    public function getTotalReviewsAttribute()
-    {
-        return $this->reviews()->count();
-    }
-
     public function getFiveStarsAttribute()
     {
         return $this->reviews()->where('rate', 5)->count();
