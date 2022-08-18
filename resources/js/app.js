@@ -11,6 +11,9 @@ require('./bootstrap');
 require('./slickk');
 require('./course-select2');
 require('./filter');
+require('./rateYo');
+require('./review-rating');
+require('./review');
 
 
 window.Vue = require('vue').default;
