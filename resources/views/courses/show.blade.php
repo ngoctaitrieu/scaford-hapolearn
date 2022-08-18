@@ -77,12 +77,7 @@
                                                     <span>{{ (isset($data['page'])) ? ((($data['page'] - 1) * 10) + ($index + 1)) : ($index + 1) }}.</span>
                                                     <p class="course-detail-lesson-title">{{ $courseLesson->name }}</p>
                                                 </div>
-                                                @if($courseDetail->isJoined)
                                                     <button>{{ __('course-detail.learn') }}</button>
-                                                @else
-                                                    <span class="learn-display">{{ __('course-detail.learn') }}</span>
-                                                @endif
-
                                             </div>
                                         @endforeach
                                     </div>

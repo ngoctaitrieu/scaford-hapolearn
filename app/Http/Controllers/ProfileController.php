@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Requests\ProfileFormRequest;
+use App\Services\UserService;
 
 class ProfileController extends Controller
 {
@@ -13,50 +16,9 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        return view('profiles.index');
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+        $userDetail = User::find(auth()->id());
+        $courses = $userDetail->courses()->get();
+        return view('profiles.index', compact('userDetail', 'courses'));
     }
 
     /**
@@ -66,19 +28,12 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ProfileFormRequest $request, $id)
     {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        if ($request->has('image_upload')) {
+            $request['avatar'] = UserService::handleUploadImage($request->file('image_upload'));
+        }
+        User::find($id)->update(array_filter($request->all()));
+        return redirect()->back();
     }
 }

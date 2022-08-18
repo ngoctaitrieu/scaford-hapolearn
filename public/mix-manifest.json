@@ -4,7 +4,6 @@
     "/images/banner.png": "/images/banner.png",
     "/images/banner2.png": "/images/banner2.png",
     "/images/Group 7@2x.png": "/images/Group 7@2x.png",
-    "/images/HapoLearn_2022.zip": "/images/HapoLearn_2022.zip",
     "/images/html-css-js.png": "/images/html-css-js.png",
     "/images/laravel.png": "/images/laravel.png",
     "/images/logo-img.png": "/images/logo-img.png",
@@ -12,6 +11,7 @@
     "/images/logo.png": "/images/logo.png",
     "/images/php.png": "/images/php.png",
     "/images/Rectangle 24.png": "/images/Rectangle 24.png",
+    "/images/user-default-img.jpeg": "/images/user-default-img.jpeg",
     "/images/user-img.png": "/images/user-img.png",
     "/images/vendor/slick-carousel/slick/ajax-loader.gif": "/images/vendor/slick-carousel/slick/ajax-loader.gif",
     "/images/why-hapolearn-bg.png": "/images/why-hapolearn-bg.png",
@@ -32,6 +32,5 @@
     "/fonts/vendor/slick-carousel/slick/slick.eot": "/fonts/vendor/slick-carousel/slick/slick.eot",
     "/fonts/vendor/slick-carousel/slick/slick.svg": "/fonts/vendor/slick-carousel/slick/slick.svg",
     "/fonts/vendor/slick-carousel/slick/slick.ttf": "/fonts/vendor/slick-carousel/slick/slick.ttf",
-    "/fonts/vendor/slick-carousel/slick/slick.woff": "/fonts/vendor/slick-carousel/slick/slick.woff",
-    "/images/user-default-img.jpeg": "/images/user-default-img.jpeg"
+    "/fonts/vendor/slick-carousel/slick/slick.woff": "/fonts/vendor/slick-carousel/slick/slick.woff"
 }

@@ -14,6 +14,7 @@ require('./course-select2');
 require('./filter');
 require('./review-rating');
 require('./review');
+require('./previewImage');
 
 
 window.Vue = require('vue').default;

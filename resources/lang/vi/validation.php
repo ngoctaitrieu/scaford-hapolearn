@@ -12,4 +12,6 @@ return [
     'email' => ':attribute không hợp lệ',
     'same' => ':attribute không trùng nhau',
     'confirmed' => ':attribute không trùng nhau',
+    'regex' => ':attribute không hợp lệ',
+    'image' => ':attribute không hợp lệ'
 ];
