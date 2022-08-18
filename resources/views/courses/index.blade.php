@@ -91,7 +91,9 @@
                                     <p class="course-item-intro">{{ $course->description }}</p>
                                 </div>
                             </div>
-                            <a class="course-item-btn" href="#">{{ __('course.more') }}</a>
+                            <form action="{{ route('courses.show', $course->id) }}" method="get">
+                                <button type="submit" class="course-item-btn">{{ __('course.more') }}</button>
+                            </form>
                             <div class="course-item-info">
                                 <div class="course-item-info-title">
                                     <span>{{ __('course.learners') }}</span>

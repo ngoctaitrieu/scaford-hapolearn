@@ -32,4 +32,9 @@ class Review extends Model
     {
         return $query->take(config('variable.num_reviews_home'));
     }
+
+    public function checkUserReview()
+    {
+        return $this['user_id'] == auth()->id();
+    }
 }

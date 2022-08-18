@@ -10,4 +10,5 @@ return [
     'paginate' => 15,
     'sort_by_newest' => 'newest',
     'sum' => 'time',
+    'paginate_10' => 10,
 ];
