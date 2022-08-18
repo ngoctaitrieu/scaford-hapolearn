@@ -14,6 +14,7 @@ require('./filter');
 require('./rateYo');
 require('./review-rating');
 require('./review');
+require('./previewImage');
 
 
 window.Vue = require('vue').default;

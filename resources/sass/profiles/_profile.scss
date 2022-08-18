@@ -1,0 +1,209 @@
+.profiles-container {
+  margin-top: 108px;
+  background-color: #F2F2F2;
+  font-family: 'UTM BryantLG';
+  min-height: 60vh;
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+
+.user-information {
+  position: relative;
+  text-align: center;
+
+  .user-img {
+    width: 200px;
+    height: 200px;
+    border: 2px solid white;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .user-img-btn {
+    display: none;
+  }
+
+  label {
+    color: white;
+    position: absolute;
+    font-size: 20px;
+    top: 166px;
+    left: 182px;
+  }
+
+  p {
+    width: 200px;
+    margin: 0 auto;
+    color: #505353;
+    font-size: 18px;
+  }
+
+  .user-name {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+
+  .user-email {
+    padding-bottom: 14px;
+    border-bottom: 1px solid #DCDCDC;
+  }
+
+  .user-birthday {
+    padding: 14px 0;
+    border-bottom: 1px solid #DCDCDC;
+    text-align: left;
+
+    i {
+      margin-right: 10px;
+      color: #F26525;
+    }
+  }
+
+  .user-phone {
+    padding: 14px 0;
+    border-bottom: 1px solid #DCDCDC;
+    text-align: left;
+
+    i {
+      color: #B2D235;
+      margin-right: 10px;
+    }
+  }
+
+  .user-address {
+    padding: 14px 0;
+    border-bottom: 1px solid #DCDCDC;
+    text-align: left;
+
+    i {
+      color: #662E93;
+      margin-right: 10px;
+    }
+  }
+
+  .user-description {
+    text-align: justify;
+    width: 70%;
+    padding-top: 16px;
+  }
+}
+
+.user-profiles {
+  color: #505353;
+
+  .user-profiles-heading {
+    font-size: 38px;
+    font-weight: 900;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      background-color: #B2D235;
+      height: 1px;
+      width: 100%;
+      position: absolute;
+      top: 100%;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      background-color: #B2D235;
+      height: 1px;
+      width: 100%;
+      position: absolute;
+      top: 106%;
+    }
+  }
+
+  .user-courses {
+    padding: 34px 0 50px;
+    display: flex;
+    justify-content: center;
+
+    .user-courses-item {
+      margin: 0 10px;
+      text-align: center;
+    }
+
+    .user-courses-item img {
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .user-courses-item span {
+      color: #505353;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .user-courses-item a {
+      text-decoration: none;
+      color: #505353;
+    }
+
+    .user-courses-item a:hover span {
+      color: #B2D235;
+    }
+
+    .user-add-courses i {
+      font-size: 30px;
+    }
+
+    .user-add-courses div {
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #505353;
+      margin: 0 auto;
+    }
+
+    .user-add-courses a:hover div{
+      color: #B2D235;
+      border-color: #B2D235;
+    }
+  }
+
+  .user-add-profile {
+
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: 700;
+    }
+  
+    input {
+      width: 100%;
+      height: 40px;
+      border-color: #D6D6D6;
+      border-radius: 4px;
+      padding-left: 8px;
+    }
+  
+    textarea {
+      border-radius: 4px;
+      border-color: #D6D6D6;
+    }
+  }
+
+  button {
+    border: 0;
+    background-color: #B2D235;
+    color: white;
+    font-weight: 700;
+    border-radius: 22px;
+    width: 90px;
+    box-shadow: inset 0px 1.5px 2px #6F8710;
+    margin-left: 88%;
+    margin-top: 10px;
+  }
+}
