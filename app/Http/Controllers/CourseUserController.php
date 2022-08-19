@@ -52,6 +52,6 @@ class CourseUserController extends Controller
             'user_id' => auth()->id()
         ])->delete();
 
-        return redirect()->back();
+        return redirect()->route('courses.show', $id);
     }
 }

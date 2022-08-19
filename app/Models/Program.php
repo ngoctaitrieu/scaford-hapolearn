@@ -24,6 +24,14 @@ class Program extends Model
 
     public function users()
     {
-        return $this->belongsToMany(User::class, 'lesson_user', 'lesson_id', 'user_id');
+        return $this->belongsToMany(User::class, 'program_user', 'program_id', 'user_id')->withTimestamps();
+    }
+
+    public function userJoinedProgram($program_id)
+    {
+        if(ProgramUser::where('program_id', $program_id)->where('user_id', auth()->id())->count()) {
+            return true;
+        }
+        return false;
     }
 }
