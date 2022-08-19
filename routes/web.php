@@ -28,6 +28,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('reviews', ReviewController::class)->only(['destroy', 'update']);
     Route::resource('course-users', CourseUserController::class)->only(['store', 'destroy', 'update']);
     Route::resource('profiles', ProfileController::class)->only(['index', 'update']);
-    Route::resource('lessons', LessonController::class)->middleware('canLearnLessons');
-    Route::resource('programs', ProgramController::class);
+    Route::resource('lessons', LessonController::class)->middleware('canLearnLessons')->only('show');
+    Route::resource('programs', ProgramController::class)->only('store');
 });
