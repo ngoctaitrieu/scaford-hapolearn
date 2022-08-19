@@ -77,7 +77,10 @@
                                                     <span>{{ (isset($data['page'])) ? ((($data['page'] - 1) * 10) + ($index + 1)) : ($index + 1) }}.</span>
                                                     <p class="course-detail-lesson-title">{{ $courseLesson->name }}</p>
                                                 </div>
-                                                    <button>{{ __('course-detail.learn') }}</button>
+                                                <form action="{{ route('lessons.show', $courseLesson->id) }}" method="get">
+                                                    <input type="hidden" name="course_id" value="{{ $courseDetail->id }}">
+                                                    <button type="submit">{{ __('course-detail.learn') }}</button>
+                                                </form>
                                             </div>
                                         @endforeach
                                     </div>
@@ -157,7 +160,7 @@
                                                 @if($userReview->parent_id == 0)
                                                     <div class="user-review">
                                                         <div class="user-review-info">
-                                                            <img src="{{ $userReview->user->avatar }}" alt="ảnh người dùng">
+                                                            <img src="{{ asset($userReview->user->avatar) }}" alt="ảnh người dùng">
                                                             <span class="user-review-name">{{ $userReview->user->name }}</span>
                                                             <div class="user-review-star">
                                                                 @for ($i = 0; $i < $userReview->rate; $i++)
@@ -241,7 +244,7 @@
                                                             @if($userReviewReply->parent_id == $userReview->id)
                                                                 <div class="user-review-sub">
                                                                     <div class="user-review-info">
-                                                                        <img src="{{ $userReviewReply->user->avatar }}" alt="ảnh người dùng">
+                                                                        <img src="{{ asset($userReviewReply->user->avatar) }}" alt="ảnh người dùng">
                                                                         <span class="user-review-name">{{ $userReviewReply->user->name }}</span>
                                                                         <span class="user-review-time">{{ $userReviewReply->updated_at}}</span>
                                                                     </div>

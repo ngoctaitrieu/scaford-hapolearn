@@ -37,4 +37,9 @@ class Lesson extends Model
         }
         return $query;
     }
+
+    public function getTotalProgramsAttribute()
+    {
+        return $this->programs()->count();
+    }
 }
