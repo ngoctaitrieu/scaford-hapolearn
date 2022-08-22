@@ -37,7 +37,7 @@ class ForgotPasswordController extends Controller
         ]);
         
         
-        Mail::send('test', compact('email', 'token'), function ($email) use($request) {
+        Mail::send('test', compact('email', 'token'), function ($email) use ($request) {
             $email->subject(__('reset-password.password_update_notify'));
             $email->to($request['email']);
         });

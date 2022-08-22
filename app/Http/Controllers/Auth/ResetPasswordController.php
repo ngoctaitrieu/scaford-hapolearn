@@ -44,8 +44,9 @@ class ResetPasswordController extends Controller
             'token' => $request['token'],
         ]);
         
-        if(!$passwordReset)
+        if (!$passwordReset) {
             return redirect()->back()->with('status', __('reset-password.invalid_token'));
+        }
         
         User::where('email', $request['email'])->update([
             'password' => Hash::make($request['password']),
