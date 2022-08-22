@@ -16,6 +16,11 @@
                                 {{ session('error') }}
                             </div>
                         @endif
+                        @if (session('status'))
+                            <div class="alert alert-success" role="alert">
+                                {{ session('status') }}
+                            </div>
+                        @endif
 
                         <div class="form-group">
                             <label for="username" class="col-md-4 col-form-label">{{ __('message.username') }}</label><br>
