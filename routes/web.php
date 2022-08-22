@@ -4,6 +4,7 @@ use App\Http\Controllers\CourseController;
 use App\Http\Controllers\CourseUserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\LessonController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProgramController;
@@ -31,3 +32,4 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('lessons', LessonController::class)->middleware('canLearnLessons')->only('show');
     Route::resource('programs', ProgramController::class)->only('store');
 });
+Route::get('/{locale}', [HomeController::class, 'lang'])->name('home.lang');
