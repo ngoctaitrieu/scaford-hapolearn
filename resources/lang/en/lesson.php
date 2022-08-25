@@ -11,4 +11,5 @@ return [
     'preview' => 'Preview',
     'program' => 'Program',
     'course' => 'Course',
+    'studying' => 'Studying',
 ];

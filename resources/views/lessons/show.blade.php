@@ -18,9 +18,9 @@
                         <div class="course-detail-img mb-5">
                             <img src="{{ $lesson->image }}" alt="">
                         </div>
-                        <h3>{{ __('lesson.progress') }}: {{ ($programUsers / $lesson->totalPrograms) * 100 }}%</h3>
+                        <h3>{{ __('lesson.progress') }}: {{ $lesson->progress }}%</h3>
                         <div class="lesson-progress mb-4">
-                            <div class="user-progress" style="width: {{ ($programUsers / $lesson->totalPrograms) * 100 }}%"></div>
+                            <div class="user-progress" style="width: {{ $lesson->progress }}%"></div>
                         </div>
                         <div class="bg-white p-3">
                             <ul class="nav nav-pills" id="pills-tab" role="tablist">
@@ -65,9 +65,9 @@
                                                     <input type="hidden" name="program_id" value="{{ $program->id }}">
                                                     <input type="hidden" name="source_code" value="{{ $program->source_code }}">
                                                     @if($index == 0 || $program->userJoinedProgram($programs[$index]->id))
-                                                        <button type="submit">{{ __('lesson.preview') }}</button>
+                                                        <button type="submit" formtarget="_blank">{{ __('lesson.preview') }}</button>
                                                     @elseif(!$program->userJoinedProgram($programs[$index]->id) && $program->userJoinedProgram($programs[$index-1]->id))
-                                                        <button type="submit">{{ __('lesson.preview') }}</button>
+                                                        <button type="submit" formtarget="_blank">{{ __('lesson.preview') }}</button>
                                                     @else
                                                         <p class="btn-not-submit">{{ __('lesson.preview') }}</p>
                                                     @endif

@@ -77,10 +77,30 @@
                                                     <span>{{ (isset($data['page'])) ? ((($data['page'] - 1) * 10) + ($index + 1)) : ($index + 1) }}.</span>
                                                     <p class="course-detail-lesson-title">{{ $courseLesson->name }}</p>
                                                 </div>
-                                                <form action="{{ route('lessons.show', $courseLesson->id) }}" method="get">
-                                                    <input type="hidden" name="course_id" value="{{ $courseDetail->id }}">
-                                                    <button type="submit">{{ __('course-detail.learn') }}</button>
-                                                </form>
+                                                <div class="program-status @if($courseLesson->progress == 0) program-status-not-join @elseif($courseLesson->progress > 0 && $courseLesson->progress < 100) lesson-status-studing @endif lesson-status">
+                                                    @if($courseLesson->progress == 100)
+                                                        {{ __('lesson.studied') }}
+                                                    @elseif($courseLesson->progress > 0 && $courseLesson->progress < 100)
+                                                        {{ __('lesson.studying') }}
+                                                    @else
+                                                        {{ __('lesson.not_study') }}
+                                                    @endif
+                                                </div>
+                                                @if($index == 0 || $courseLesson->progress == 100)
+                                                    <form action="{{ route('lessons.show', $courseLesson->id) }}" method="get">
+                                                        <input type="hidden" name="course_id" value="{{ $courseDetail->id }}">
+                                                        <button type="submit">{{ __('course-detail.learn') }}</button>
+                                                    </form>
+                                                @elseif($courseLessons[$index-1]->progress == 100)
+                                                    <form action="{{ route('lessons.show', $courseLesson->id) }}" method="get">
+                                                        <input type="hidden" name="course_id" value="{{ $courseDetail->id }}">
+                                                        <button type="submit">{{ __('course-detail.learn') }}</button>
+                                                    </form>
+                                                @else
+                                                    <div class="lesson-file-type">
+                                                        <p class="btn-not-submit">{{ __('course-detail.learn') }}</p>
+                                                    </div>
+                                                @endif
                                             </div>
                                         @endforeach
                                     </div>

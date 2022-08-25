@@ -26,10 +26,10 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::resource('courses', CourseController::class)->only(['index', 'show']);
 Route::group(['middleware' => 'auth'], function () {
     Route::resource('reviews', ReviewController::class)->only(['store'])->middleware('canReview');
-    Route::resource('reviews', ReviewController::class)->only(['destroy', 'update']);
+    Route::resource('reviews', ReviewController::class)->only(['destroy', 'update'])->middleware('checkUser');
     Route::resource('course-users', CourseUserController::class)->only(['store', 'destroy', 'update']);
     Route::resource('profiles', ProfileController::class)->only(['index', 'update']);
-    Route::resource('lessons', LessonController::class)->middleware('canLearnLessons')->only('show');
+    Route::resource('lessons', LessonController::class)->only(['show', 'store'])->middleware('canLearnLessons');
     Route::resource('programs', ProgramController::class)->only('store');
 });
 Route::get('/{locale}', [HomeController::class, 'lang'])->name('home.lang');

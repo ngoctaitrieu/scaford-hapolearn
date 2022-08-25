@@ -35,7 +35,7 @@
                 {{ __('home.practice') }}
             </p>
         </div>
-        <a href="#" class="button-1">{{ __('home.start_learning_now') }}!</a>
+        <a href="{{ route('courses.index') }}" class="button-1">{{ __('home.start_learning_now') }}!</a>
     </div>
     <div class="banner-bottom">
 
@@ -57,7 +57,7 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ $course->name }}</h5>
                             <p class="card-text">{{ $course->description }}</p>
-                            <a href="#" class="card-btn btn btn-primary">Take This Course</a>
+                            <a href="{{ route('courses.show', $course->id) }}" class="card-btn btn btn-primary">Take This Course</a>
                         </div>
                     </div>
                 </div>
@@ -76,15 +76,15 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ $course->name }}</h5>
                             <p class="card-text">{{ $course->description }}</p>
-                            <a href="#" class="card-btn btn btn-primary">Take This Course</a>
+                            <a href="{{ route('courses.show', $course->id) }}" class="card-btn btn btn-primary">Take This Course</a>
                         </div>
                     </div>
                 </div>
             @endforeach
         </div>
         <div class="view-all-content">
-            <a href="#">{{ __('home.view_all_course') }}</a>
-            <a href="">
+            <a href="{{ route('courses.index') }}">{{ __('home.view_all_course') }}</a>
+            <a href="{{ route('courses.index') }}">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                     <path d="M502.6 278.6l-128 128c-12.51 12.51-32.76 12.49-45.25 0c-12.5-12.5-12.5-32.75 0-45.25L402.8 288H32C14.31 288 0 273.7 0 255.1S14.31 224 32 224h370.8l-73.38-73.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l128 128C515.1 245.9 515.1 266.1 502.6 278.6z"/>
                 </svg>
@@ -158,7 +158,7 @@
     <p class="banner-b-title">
         {{ __('home.become_a_member') }}
     </p>
-    <a class="banner-b-btn" href="">{{ __('home.start_learning_now') }}!</a>
+    <a class="banner-b-btn" href="{{ route('courses.index') }}">{{ __('home.start_learning_now') }}!</a>
 </section>
 
 <section class="statistic container-fluid">

@@ -25,4 +25,16 @@ class LessonController extends Controller
 
         return view('lessons.show', compact('lesson', 'otherCourses', 'courseTags', 'programs', 'programUsers'));
     }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+       dd(1);
+        return redirect();
+    }
 }

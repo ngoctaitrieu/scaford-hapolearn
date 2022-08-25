@@ -11,4 +11,5 @@ return [
     'preview' => 'Xem',
     'program' => 'Chương trình',
     'course' => 'Khóa học',
+    'studying' => 'Đang học',
 ];
