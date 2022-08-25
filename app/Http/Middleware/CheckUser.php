@@ -19,7 +19,7 @@ class CheckUser
     {
         $userId = Review::where('id', $request->route('review'))->first();
 
-        if(!($userId->user_id == auth()->id())) {
+        if (!($userId['user_id'] == auth()->id())) {
             return redirect()->back()->with('message', 'Hành động không hợp lệ. Mời thử lại!');
         }
 
