@@ -34,7 +34,6 @@ class LessonController extends Controller
      */
     public function store(Request $request)
     {
-       dd(1);
-        return redirect();
+        return redirect()->back();
     }
 }
