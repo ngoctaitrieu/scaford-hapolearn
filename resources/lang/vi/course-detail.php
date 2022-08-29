@@ -36,4 +36,5 @@ return [
     'learning' => 'Đang học',
     'need_join' => 'Bạn phải tham gia khóa học để bình luận',
     'just_one_reviews' => 'Bạn chỉ được đánh giá một lần',
+    'need_join_to_learn' => 'Bạn cần tham gia khóa học để có thể học bài',
 ];

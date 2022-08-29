@@ -36,4 +36,5 @@ return [
     'learning' => 'Studying',
     'need_join' => 'You must take the course to comment',
     'just_one_reviews' => 'You are only evaluated once',
+    'need_join_to_learn' => 'You need to attend the course to be able to study',
 ];

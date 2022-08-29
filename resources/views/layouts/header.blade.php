@@ -16,10 +16,10 @@
                 <li class="nav-item {{ (Request::route()->getName() == 'home') ? 'active' : '' }}">
                     <a class="nav-link" href="/">HOME <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item {{ (Request::route()->getName() == 'courses.index') ? 'active' : '' }}">
+                <li class="nav-item {{ ((Request::route()->getName() == 'courses.index') || (Request::route()->getName() == 'courses.show')) ? 'active' : '' }}">
                     <a class="nav-link" href="{{ route('courses.index') }}">ALL COURSES</a>
                 </li>
-                <li class="nav-item {{ (Request::route()->getName() == 'profiles') ? 'active' : '' }}">
+                <li class="nav-item {{ (Request::route()->getName() == 'profiles.index') ? 'active' : '' }}">
                     <a class="nav-link" href="{{ route('profiles.index') }}">PROFILE</a>
                 </li>
                 <li class="nav-item {{ ((Request::route()->getName() == 'login') || (Request::route()->getName() == 'register')) ? 'active' : '' }}">
@@ -36,6 +36,28 @@
                         </a>
                     @endif
                 </li>
+                <div class="language-container">
+                    <a class="language-link" href="">
+                        <img class="language-img" src="@if(app()->getLocale() == 'vi') {{ asset('images/vn.png') }} @else {{ asset('images/en.png') }} @endif" alt="VN">
+                        <span>@if(app()->getLocale() == 'vi') TIẾNG VIỆT @else TIẾNG ANH @endif</span>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </a>
+
+                    <ul class="language-list">
+                        <li class="language-item">
+                            <a class="language-link" href="{{ route('home.lang', ['en']) }}">
+                                <img class="language-img" src="{{ asset('images/en.png') }}" alt="">
+                                <span>TIẾNG ANH</span>
+                            </a>
+                        </li>
+                        <li class="language-item">
+                            <a class="language-link" href="{{ route('home.lang', ['vi']) }}">
+                                <img class="language-img" src="{{ asset('images/vn.png') }}" alt="VN">
+                                <span>TIẾNG VIỆT</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </ul>
         </div>
     </nav>

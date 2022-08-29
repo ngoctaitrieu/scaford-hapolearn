@@ -5,9 +5,9 @@
 <section class="banner">
     <div class="banner-container"  style="background-image: url('images/banner.png');">
         <div class="banner-title">
-            <p class="banner-title-content">Learn Anytime, Anywhere</p>
+            <p class="banner-title-content">{{ __('home.learn_anytime_anywhere') }}</p>
             <p class="banner-title-content banner-title-content-b">
-                at HapoLearn
+                {{ __('home.with_hapolearn') }}
                 <svg width="55" height="50" viewBox="0 0 55 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M54.4835 20.9189C54.3711 20.3004 54.0899 19.7662 53.6963 19.3163C53.3308 14.2275 51.8407 9.25108 48.7761 5.11814C47.4547 3.34688 46.049 1.71619 43.7716 1.15389C42.141 0.760276 40.5103 1.01331 39.0202 1.74431C37.1927 2.67211 35.5058 3.5718 33.5377 4.1341C30.2201 5.09002 26.7619 5.31495 23.36 4.61207C21.7855 4.27468 20.1829 3.82484 18.6928 3.17819C17.0622 2.4753 15.6283 1.32258 13.857 1.04143C11.1017 0.591584 8.68381 1.913 7.02501 4.02164C3.45437 8.52008 1.62688 13.8058 1.23327 19.5131C0.361697 20.694 0.361697 22.2122 1.23327 23.3931C1.62688 29.4378 3.59495 35.089 7.53109 39.8124C10.7081 43.6079 15.0379 46.3913 19.7612 47.8533C28.983 50.7211 39.47 48.1063 46.2177 41.1619C50.8567 36.3823 53.2184 30.1969 53.6963 23.6461C54.118 23.1962 54.3992 22.6621 54.4835 22.0154C54.5117 21.8748 54.5117 21.7061 54.5117 21.5656C54.5398 21.3688 54.5398 21.1438 54.4835 20.9189Z" fill="white"/>
                     <path d="M54.4835 20.9189C54.3711 20.3004 54.0899 19.7662 53.6963 19.3163C53.3308 14.2275 51.8407 9.25108 48.7762 5.11814C47.4547 3.34688 46.049 1.71619 43.7716 1.15389C42.141 0.760276 40.5103 1.01331 39.0202 1.74431C37.1927 2.67211 35.5058 3.5718 33.5377 4.1341C30.2201 5.09002 26.7619 5.31495 23.36 4.61207C21.7855 4.27468 20.1829 3.82484 18.6928 3.17819C17.0622 2.4753 15.6283 1.32258 13.857 1.04143C11.1017 0.591584 8.68381 1.913 7.02501 4.02164C3.45437 8.52008 1.62688 13.8058 1.23327 19.5131C0.361697 20.694 0.361697 22.2122 1.23327 23.3931C1.62688 29.4378 3.59495 35.089 7.53108 39.8124C10.7081 43.6079 15.0379 46.3913 19.7612 47.8533C28.983 50.7211 39.47 48.1064 46.2177 41.1619C50.8567 36.3823 53.2184 30.1969 53.6963 23.6461C54.118 23.1962 54.3992 22.6621 54.4835 22.0154C54.5117 21.8748 54.5117 21.7061 54.5117 21.5656C54.5398 21.3688 54.5398 21.1438 54.4835 20.9189Z" stroke="#B2D237" stroke-width="0.25" stroke-miterlimit="10"/>
@@ -31,11 +31,11 @@
         </div>
         <div class="banner-content">
             <p>
-                Interactive lessons, "on-the-go" <br>
-                practice, peer support.
+                {{ __('home.interactive_lessons') }} <br>
+                {{ __('home.practice') }}
             </p>
         </div>
-        <a href="#" class="button-1">Start Learning Now!</a>
+        <a href="{{ route('courses.index') }}" class="button-1">{{ __('home.start_learning_now') }}!</a>
     </div>
     <div class="banner-bottom">
 
@@ -57,7 +57,7 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ $course->name }}</h5>
                             <p class="card-text">{{ $course->description }}</p>
-                            <a href="#" class="card-btn btn btn-primary">Take This Course</a>
+                            <a href="{{ route('courses.show', $course->id) }}" class="card-btn btn btn-primary">Take This Course</a>
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
         </div>
     </div>
     <div class="other-content main-content">
-        <p class="other-content-header">Other course</p>
+        <p class="other-content-header">{{ __('home.other_course') }}</p>
         <div class="row">
             @foreach($otherCourses as $course)
                 <div class="col-lg-4">
@@ -76,15 +76,15 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ $course->name }}</h5>
                             <p class="card-text">{{ $course->description }}</p>
-                            <a href="#" class="card-btn btn btn-primary">Take This Course</a>
+                            <a href="{{ route('courses.show', $course->id) }}" class="card-btn btn btn-primary">Take This Course</a>
                         </div>
                     </div>
                 </div>
             @endforeach
         </div>
         <div class="view-all-content">
-            <a href="#">View All Our Courses</a>
-            <a href="">
+            <a href="{{ route('courses.index') }}">{{ __('home.view_all_course') }}</a>
+            <a href="{{ route('courses.index') }}">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                     <path d="M502.6 278.6l-128 128c-12.51 12.51-32.76 12.49-45.25 0c-12.5-12.5-12.5-32.75 0-45.25L402.8 288H32C14.31 288 0 273.7 0 255.1S14.31 224 32 224h370.8l-73.38-73.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l128 128C515.1 245.9 515.1 266.1 502.6 278.6z"/>
                 </svg>
@@ -97,36 +97,36 @@
     <div class="why-hapolearn-content">
         <img class="why-hapolearn-img2" src="{{ asset('images/why-hapolearn-img2.png') }}" alt="Hapolearn images top">
         <p class="why-hapolearn-title">
-            Why HapoLearn?
+            {{ __('home.why_hapolearn') }}?
         </p>
         <p class="why-hapolearn-text">
             <i class="fa-solid fa-circle-check"></i>
-            Interactive lessons, "on-the-go" practice, peer support.
+            {{ __('home.interactive_lessons') }} {{ __('home.practice') }}
         </p>
         <p class="why-hapolearn-text">
             <i class="fa-solid fa-circle-check"></i>
-            Interactive lessons, "on-the-go" practice, peer support.
+            {{ __('home.interactive_lessons') }} {{ __('home.practice') }}
         </p>
         <p class="why-hapolearn-text">
             <i class="fa-solid fa-circle-check"></i>
-            Interactive lessons, "on-the-go" practice, peer support.
+            {{ __('home.interactive_lessons') }} {{ __('home.practice') }}
         </p>
         <p class="why-hapolearn-text">
             <i class="fa-solid fa-circle-check"></i>
-            Interactive lessons, "on-the-go" practice, peer support.
+            {{ __('home.interactive_lessons') }} {{ __('home.practice') }}
         </p>
         <p class="why-hapolearn-text">
             <i class="fa-solid fa-circle-check"></i>
-            Interactive lessons, "on-the-go" practice, peer support.
+            {{ __('home.interactive_lessons') }} {{ __('home.practice') }}
         </p>
     </div>
     <img class="why-hapolearn-img" src="{{ asset('images/why-hapolearn-img.png') }}" alt="Ảnh của why hapolearn">
 </section>
 
 <section class="feedback container-fluid">
-    <p class="feedback-heading">Feedback</p>
+    <p class="feedback-heading">{{ __('home.feedback') }}</p>
     <p class="feedback-title">
-        What other students turned professionals have to say about us after learning with us and reaching their goals
+        {{ __('home.feedback_text') }}
     </p>
     <div class="feedback-list">
         @foreach($mainReviews as $review)
@@ -156,25 +156,24 @@
 
 <section class="banner-b" style="background-image: url('{{ asset('images/banner2.png') }}');">
     <p class="banner-b-title">
-        Become a member of our
-        growing community!
+        {{ __('home.become_a_member') }}
     </p>
-    <a class="banner-b-btn" href="">Start Learning Now!</a>
+    <a class="banner-b-btn" href="{{ route('courses.index') }}">{{ __('home.start_learning_now') }}!</a>
 </section>
 
 <section class="statistic container-fluid">
-    <p class="statistic-heading">Statistic</p>
+    <p class="statistic-heading">{{ __('home.statistic') }}</p>
     <div class="statistic-main">
         <div class="statistic-content">
-            <p class="statistic-content-title">Courses</p>
+            <p class="statistic-content-title">{{ __('home.courses') }}</p>
             <p class="statistic-content-num">{{ $totalCourse }}</p>
         </div>
         <div class="statistic-content">
-            <p class="statistic-content-title">Lessons</p>
+            <p class="statistic-content-title">{{ __('home.lessons') }}</p>
             <p class="statistic-content-num">{{ $totalLesson }}</p>
         </div>
         <div class="statistic-content">
-            <p class="statistic-content-title">Learners</p>
+            <p class="statistic-content-title">{{ __('home.learners') }}</p>
             <p class="statistic-content-num">{{ $learners }}</p>
         </div>
     </div>

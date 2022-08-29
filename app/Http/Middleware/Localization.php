@@ -2,11 +2,11 @@
 
 namespace App\Http\Middleware;
 
-use App\Models\Course;
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
-class CanLearnLessons
+class Localization
 {
     /**
      * Handle an incoming request.
@@ -17,13 +17,8 @@ class CanLearnLessons
      */
     public function handle(Request $request, Closure $next)
     {
-        if (!isset($request['course_id'])) {
-            return abort(404);
-        }
-        
-        $course = Course::find($request['course_id']);
-        if (!$course->isJoined()->count() || $course->isFinished()->count()) {
-            return redirect()->back()->with('message', __('course-detail.need_join_to_learn'));
+        if (session()->has('locale')) {
+            App::setLocale(session()->get('locale'));
         }
 
         return $next($request);

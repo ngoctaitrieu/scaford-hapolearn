@@ -5,7 +5,7 @@
   background-color: #FFFFFF;
   display: block;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
+  // overflow: hidden;
   position: fixed;
   top: 0;
   left: 0;
@@ -50,6 +50,42 @@
 
   .navbar-icons {
     display: none;
+  }
+}
+
+.language-container {
+  position: relative;
+
+  .language-link {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 40px;
+    font-weight: 700;
+
+    .language-img {
+      width: 30px;
+    }
+  }
+
+  .language-list {
+    display: none;
+    list-style: none;
+    position: absolute;
+    right: 0;
+    z-index: 10;
+    padding: 0 10px;
+    width: 160px;
+    background-color: white;
+    box-shadow: 0px 1px 2px 0px rgb(0 0 0 / 50%);
+    border-radius: 4px;
+
+    .language-item {
+      padding: 2px 0;
+    }
+  }
+
+  &:hover .language-list {
+    display: block;
   }
 }
 

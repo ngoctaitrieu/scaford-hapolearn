@@ -2,11 +2,11 @@
 
 namespace App\Http\Middleware;
 
-use App\Models\Course;
+use App\Models\Review;
 use Closure;
 use Illuminate\Http\Request;
 
-class CanLearnLessons
+class CheckUser
 {
     /**
      * Handle an incoming request.
@@ -17,13 +17,10 @@ class CanLearnLessons
      */
     public function handle(Request $request, Closure $next)
     {
-        if (!isset($request['course_id'])) {
-            return abort(404);
-        }
-        
-        $course = Course::find($request['course_id']);
-        if (!$course->isJoined()->count() || $course->isFinished()->count()) {
-            return redirect()->back()->with('message', __('course-detail.need_join_to_learn'));
+        $userId = Review::where('id', $request->route('review'))->first();
+
+        if (!($userId['user_id'] == auth()->id())) {
+            return redirect()->back()->with('message', 'Hành động không hợp lệ. Mời thử lại!');
         }
 
         return $next($request);

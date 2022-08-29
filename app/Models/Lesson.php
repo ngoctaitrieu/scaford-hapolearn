@@ -42,4 +42,15 @@ class Lesson extends Model
     {
         return $this->programs()->count();
     }
+
+    public function getProgressAttribute()
+    {
+        $programLearned = Program::whereHas('users', function ($query) {
+            $query->where('users.id', auth()->id())->where('programs.lesson_id', $this->id);
+        })->count();
+
+        $total = $this->programs->count();
+
+        return $total == 0 ? 0 : round(($programLearned / $total) * 100, 2);
+    }
 }

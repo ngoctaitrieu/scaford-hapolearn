@@ -53,7 +53,7 @@ class LoginController extends Controller
         ];
 
         if (Auth::attempt($data)) {
-            return redirect('/');
+            return redirect()->intended($this->redirectPath());
         }
         return redirect()->back()->with('error', __('message.login_error'));
     }

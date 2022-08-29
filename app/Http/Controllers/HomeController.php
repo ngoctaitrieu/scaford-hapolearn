@@ -6,6 +6,7 @@ use App\Models\Course;
 use App\Models\CourseUser;
 use App\Models\Lesson;
 use App\Models\Review;
+use Illuminate\Support\Facades\App;
 
 class HomeController extends Controller
 {
@@ -24,5 +25,14 @@ class HomeController extends Controller
         $learners = CourseUser::learners()->get()->count();
 
         return view('home', compact('mainCourses', 'otherCourses', 'mainReviews', 'totalCourse', 'totalLesson', 'learners'));
+    }
+
+    public function lang($locale)
+    {
+        if ($locale) {
+            session()->put('locale', $locale);
+        }
+        
+        return redirect()->back();
     }
 }

@@ -18,6 +18,7 @@ class CanReview
     public function handle(Request $request, Closure $next)
     {
         $course = Course::find($request['course_id']);
+
         if (!$course->isJoined()->count() || $course->isFinished()->count()) {
             return redirect()->back()->with('message', __('course-detail.need_join'));
         }
